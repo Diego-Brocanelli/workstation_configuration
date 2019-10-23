@@ -1,0 +1,16 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Dracula",
+    "editor.insertSpaces": false,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 24,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.rulers": [80, 120],
+    "editor.formatOnSave": false,
+    "editor.renderLineHighlight": "gutter",
+    "editor.tabSize": 4,
+    "go.inferGopath": true,
+    "go.Gopath": "$HOME/go",
+    "workbench.iconTheme": "vscode-great-icons"
+}
