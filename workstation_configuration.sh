@@ -56,10 +56,10 @@ fi
 ### Installing software
 ###
 #############################################################
-echo ">>> Installing software"
 
-echo "    Updating apt...."
 sudo apt update -y 1> /dev/null 2> /dev/stdout
+echo ">>> Installing software"
+echo "    Updating apt...."
 
 echo "    Vim...."
 sudo apt install vim -y 1> /dev/null 2> /dev/stdout
@@ -108,7 +108,7 @@ echo "    Go...."
 sudo snap install go --classic 1> /dev/null 2> /dev/stdout
 
 echo "    ppa:ondrej/php...."
-sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php; 1> /dev/null 2> /dev/stdout
+sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y 1> /dev/null 2> /dev/stdout
 sudo apt update 1> /dev/null 2> /dev/stdout
 
 echo "    PHP5.6...."
