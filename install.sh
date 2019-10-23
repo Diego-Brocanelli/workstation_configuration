@@ -1,24 +1,24 @@
 #!/bin/bash 
 
 # Installing 
-./hello.sh
+source /scripts/hello.sh
 # Installing softwares
-./softwares.sh
+source /scripts/softwares.sh
 # Installing server
-./server.sh
+source /scripts/server.sh
 # Installing database
-./databse.sh
+source /scripts/databse.sh
 # Installing programming languages
-./programming_languages.sh
+source /scripts/programming_languages.sh
 # Installing tools
-./tools.sh
+source /scripts/tools.sh
 # Installing server configuration
-./server_configuration.sh
+source /scripts/server_configuration.sh
 # Installing vim configuration
-./vim_configuration.sh
+source /scripts/vim_configuration.sh
 # Installing config SO dracula theme
-./config_so_dracula_theme.sh
+source /scripts/config_so_dracula_theme.sh
 # Installing checking installed packages
-./checking_installed_packages.sh
+source /scripts/checking_installed_packages.sh
 # process completion
-./finalization.sh
+source /scripts/finalization.sh
