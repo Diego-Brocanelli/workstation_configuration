@@ -61,16 +61,16 @@ echo ">>> Installing software"
 echo "    Updating apt...."
 sudo apt update -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Vim...."
+echo "    Vim...."
 sudo apt install vim -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Git...."
+echo "    Git...."
 sudo apt install git -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing SNAP...."
+echo "    SNAP...."
 sudo apt install snapd -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Build Essential...."
+echo "    Build Essential...."
 sudo apt install build-essential -y 1> /dev/null 2> /dev/stdout
 
 #############################################################
@@ -80,7 +80,7 @@ sudo apt install build-essential -y 1> /dev/null 2> /dev/stdout
 #############################################################
 echo ""
 echo ">>> Installing Server"
-echo "    Installing Nginx...."
+echo "    Nginx...."
 sudo apt install nginx -y 1> /dev/null 2> /dev/stdout
 
 #############################################################
@@ -90,7 +90,7 @@ sudo apt install nginx -y 1> /dev/null 2> /dev/stdout
 #############################################################
 echo ""
 echo ">>> Installing Database"
-echo "    Installing MySQL...."
+echo "    MySQL...."
 sudo apt install mysql-client mysql-server -y 1> /dev/null 2> /dev/stdout
 echo ""
 
@@ -101,83 +101,87 @@ echo ""
 #############################################################
 echo ">>> Installing Programming languages"
 
-echo "    Installing NodeJS...."
+echo "    NodeJS...."
 sudo snap install node --channel=10/stable --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Go...."
+echo "    Go...."
 sudo snap install go --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Installing PHP5.6...."
+echo "    ppa:ondrej/php...."
+sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php; 1> /dev/null 2> /dev/stdout
+sudo apt update 1> /dev/null 2> /dev/stdout
+
+echo "    PHP5.6...."
 sudo apt install php5.6-fpm php5.6 php5.6-dev php5.6-cli -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing extensions PHP5.6...."
+echo "    extensions PHP5.6...."
 sudo apt-get install -y php5.6-fpm php5.6 php5.6-dev php5.6-cli php5.6-mbstring php5.6-mcrypt php5.6-gd php5.6-curl php5.6-xml php5.6-mysql php5.6-zip -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing PHP7.2...."
+echo "    PHP7.2...."
 sudo apt install php7.2-fpm php7.2 php7.2-dev php7.2-cli -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing extensions PHP7.2...."
+echo "    extensions PHP7.2...."
 sudo apt-get install -y php7.2-fpm php7.2 php7.2-dev php7.2-cli php7.2-mbstring php7.2-gd php7.2-curl php7.2-xml php7.2-mysql php7.2-zip -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing PHP7.3...."
+echo "    PHP7.3...."
 sudo apt install php7.3-fpm php7.3 php7.3-dev php7.3-cli -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing extensions PHP7.3...."
+echo "    extensions PHP7.3...."
 sudo apt-get install -y php7.3-fpm php7.3 php7.3-dev php7.3-cli php7.3-mbstring php7.3-gd php7.3-curl php7.3-xml php7.3-mysql php7.3-zip -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Composer...."
+echo "    Composer...."
 php -r "readfile('https://getcomposer.org/installer');" | php 1> /dev/null 2> /dev/stdout
 sudo mv composer.phar /usr/bin/composer 1> /dev/null 2> /dev/stdout
 
-echo "    Installing SASS...."
+echo "    SASS...."
 sudo npm install -g sass 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Less...."
+echo "    Less...."
 sudo npm install -g less 1> /dev/null 2> /dev/stdout
 
 echo ""
 echo ">>> Installing Tools"
 
-echo "    Installing MySQL Workbench...."
+echo "    MySQL Workbench...."
 sudo apt install mysql-workbench -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Skype...."
+echo "    Skype...."
 sudo snap install skype --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Slack...."
+echo "    Slack...."
 sudo snap install slack --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Sublime Text...."
+echo "    Sublime Text...."
 sudo snap install sublime-text --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Installing VSCode...."
+echo "    VSCode...."
 sudo snap install code --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Inkscape...."
+echo "    Inkscape...."
 sudo snap install inkscape 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Photogimp...."
+echo "    Photogimp...."
 sudo snap install photogimp 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Remmina...."
+echo "    Remmina...."
 sudo snap install remmina 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Postman...."
+echo "    Postman...."
 sudo snap install postman 1> /dev/null 2> /dev/stdout
 
-echo "    Installing htop...."
+echo "    htop...."
 sudo snap install htop 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Whatsapp...."
+echo "    Whatsapp...."
 sudo snap install whatsdesk 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Telegram...."
+echo "    Telegram...."
 sudo snap install telegram-desktop 1> /dev/null 2> /dev/stdout
 
-echo "    Installing Android Studio...."
+echo "    Android Studio...."
 sudo snap install android-studio --classic  1> /dev/null 2> /dev/stdout
 
-echo "    Installing Git Kraken...."
+echo "    Git Kraken...."
 sudo snap install gitkraken  1> /dev/null 2> /dev/stdout
 echo ""
 
@@ -216,16 +220,16 @@ echo ""
 echo ">>> Configurate to Vim "
 
 echo "    Create to dir .vim...."
-mkdir ~/.vim
+mkdir ~/.vim  1> /dev/null 2> /dev/stdout
 
 echo "    Create to dir .vim/colors...."
-mkdir ~/.vim/colors
+mkdir ~/.vim/colors  1> /dev/null 2> /dev/stdout
 
 echo "    Cloning to Vundle...."
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 1> /dev/null 2> /dev/stdout
 
 echo "    Copy to .vimrc...."
-cp .vimrc ~/
+cp .vimrc ~/  1> /dev/null 2> /dev/stdout
 echo ""
 
 #############################################################
@@ -235,7 +239,7 @@ echo ""
 #############################################################
 echo ">>> Configurate S.O. theme "
 echo "    Cloning to Ant-Dracula...."
-git clone https://github.com/Diego-Brocanelli/Ant-Dracula.git ~/.themes/
+git clone https://github.com/Diego-Brocanelli/Ant-Dracula.git ~/.themes/Ant-Dracula
 
 echo "    Set to Ant-Dracula theme...."
 gsettings set org.gnome.desktop.interface gtk-theme "Ant-Dracula"
@@ -250,7 +254,6 @@ echo ""
 
 echo ">>> Checking installed apt packages "
 
-
 packages=(php5.6 php7.2 php7.3 mysql less snap vim git snapd build-essential nginx mysql-workbench) 
 for package in "${packages[@]}"
 do
@@ -260,7 +263,7 @@ do
     then
         echo -e "    $package .... \e[32m[INSTALLED]\e[39m"
     else
-        echo -e "    $package .... \e[31mNOT INSTALLED]\e[39m"
+        echo -e "    $package .... \e[31m[NOT INSTALLED]\e[39m"
     fi
 done
 
@@ -279,7 +282,7 @@ do
     then
         echo -e "    $package .... \e[32m[INSTALLED]\e[39m"
     else
-        echo -e "    $package .... \e[31mNOT INSTALLED]\e[39m"
+        echo -e "    $package .... \e[31m[NOT INSTALLED]\e[39m"
     fi
 done
 
