@@ -30,7 +30,39 @@ The process will ask if you want to continue
 
 ## What will be installed
 
-php
+- **Softwares**
+  - Build Essential
+  - Git
+  - Snap
+  - Vim
+- **Server**
+  - Nginx 
+- **Database**
+  - MySQL 
+- **Programming languages**
+  - Composer
+  - Go
+  - LESS
+  - NodeJS
+  - PHP5.6
+  - PHP7.2
+  - PHP7.3
+  - SASS
+- Tools
+  - Android Studio
+  - Git Kraken
+  - htop
+  - Inkscape
+  - MySQL Workbench
+  - Photogimp
+  - Postman
+  - Remmina
+  - Skype
+  - Slack
+  - Sublime Text
+  - Telegram
+  - VSCode
+  - Whatsapp
 
 ## Result
 
