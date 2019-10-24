@@ -48,7 +48,7 @@ The process will ask if you want to continue
   - PHP7.2
   - PHP7.3
   - SASS
-- Tools
+- **Tools**
   - Android Studio
   - Git Kraken
   - htop
