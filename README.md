@@ -72,6 +72,10 @@ Result of changing directories
 
 ## Contributors
 
+<a href="https://www.diegobrocanelli.com.br/">
+<img src="https://avatars2.githubusercontent.com/u/4108889?s=460&v=4" width="150px">
+</a>
+
 <a href="https://twiiter.com/jeancabral">
 <img src="https://avatars1.githubusercontent.com/u/2077886?s=460&v=4" width="150px">
 </a>
