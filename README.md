@@ -3,7 +3,7 @@
 Shell script to automate desktop installations and configurations for a Nodejs Development Environment
 
 This is a Fork of **Diego Brocanelli** project:
-<a href="https://github.com/Diego-Brocanelli/workstation_configuration">
+https://github.com/Diego-Brocanelli/workstation_configuration
 
 ## Requirements
 
