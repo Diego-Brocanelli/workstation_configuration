@@ -5,7 +5,7 @@ echo ""
 echo $(date +'%Y-%m-%d %T')
 echo ""
 echo "Open vim and execute the command :PluginInstall"
-echo "Execute the configuration of VSCode and Sublime Text"
+echo "Execute the configuration of VSCode"
 echo "Thanks"
 echo ""
 echo "System restart required"

@@ -4,7 +4,7 @@
 ###
 ### Installing tools
 ###
-### MySQL Workbench
+### DataGrip
 ### Skype
 ### Slack
 ### Sublime Text
@@ -21,19 +21,22 @@
 ###
 #############################################################
 
-echo ">>> Installing Tools"
+echo ">>> Installing Tools (this may take some time)"
 
-echo "    MySQL Workbench...."
-sudo apt install mysql-workbench -y 1> /dev/null 2> /dev/stdout
+echo "    Firacode Font...."
+sudo apt install fonts-firacode 1> /dev/null 2> /dev/stdout
+
+echo "    Gnome Tweak Tool...."
+sudo apt install gnome-tweak-tool 1> /dev/null 2> /dev/stdout
+
+echo "    DataGrip...."
+sudo snap install datagrip --classic 1> /dev/null 2> /dev/stdout
 
 echo "    Skype...."
 sudo snap install skype --classic 1> /dev/null 2> /dev/stdout
 
 echo "    Slack...."
 sudo snap install slack --classic 1> /dev/null 2> /dev/stdout
-
-echo "    Sublime Text...."
-sudo snap install sublime-text --classic 1> /dev/null 2> /dev/stdout
 
 echo "    VSCode...."
 sudo snap install code --classic 1> /dev/null 2> /dev/stdout

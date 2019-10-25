@@ -4,16 +4,12 @@
 source scripts/hello.sh
 # Installing softwares
 source scripts/softwares.sh
-# Installing server
-source scripts/server.sh
-# Installing database
-source scripts/databse.sh
+# Installing software container
+source scripts/software_container.sh
 # Installing programming languages
 source scripts/programming_languages.sh
 # Installing tools
 source scripts/tools.sh
-# Installing server configuration
-source scripts/server_configuration.sh
 # Installing vim configuration
 source scripts/vim_configuration.sh
 # Installing config SO dracula theme
