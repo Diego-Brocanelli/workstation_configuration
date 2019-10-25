@@ -21,7 +21,7 @@
 
 echo ">>> Checking installed apt packages "
 
-packages=(php5.6 php7.2 php7.3 mysql less snap vim git snapd build-essential nginx mysql-workbench) 
+packages=(php5.6 php7.2 php7.3 mysql less snap vim git snapd build-essential nginx mysql-workbench curl) 
 for package in "${packages[@]}"
 do
     installed=$(dpkg --get-selections | grep $package ) 
