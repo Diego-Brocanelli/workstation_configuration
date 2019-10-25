@@ -1,6 +1,9 @@
-# Workstation Configuration
+# Nodejs Development Environment Workstation
 
-Shell script to automate desktop installations and configurations for a web developer.
+Shell script to automate desktop installations and configurations for a Nodejs Development Environment
+
+This is a Fork of **Diego Brocanelli** project:
+https://github.com/Diego-Brocanelli/workstation_configuration
 
 ## Requirements
 
@@ -8,7 +11,7 @@ Shell script to automate desktop installations and configurations for a web deve
 
 ## Compatibility
 
-Tests were performed on Linux Mint 19.2 and Ubuntu 19.10
+Tests were performed on Ubuntu 19.10
 
 ## How to run the script
 
@@ -33,33 +36,24 @@ The process will ask if you want to continue
 - **Softwares**
   - Build Essential
   - Git
+  - Curl
   - Snap
   - Vim
-- **Server**
-  - Nginx 
-- **Database**
-  - MySQL 
+- **Software Container**
+  - Docker 
 - **Programming languages**
-  - Composer
-  - Go
-  - LESS
-  - NodeJS
-  - PHP5.6
-  - PHP7.2
-  - PHP7.3
-  - SASS
+  - Nodejs
 - **Tools**
   - Android Studio
   - Git Kraken
   - htop
   - Inkscape
-  - MySQL Workbench
+  - DataGrip
   - Photogimp
   - Postman
   - Remmina
   - Skype
   - Slack
-  - Sublime Text
   - Telegram
   - VSCode
   - Whatsapp
@@ -80,6 +74,10 @@ Result of changing directories
 
 <a href="https://www.diegobrocanelli.com.br/">
 <img src="https://avatars2.githubusercontent.com/u/4108889?s=460&v=4" width="150px">
+</a>
+
+<a href="https://twiiter.com/jeancabral">
+<img src="https://avatars1.githubusercontent.com/u/2077886?s=460&v=4" width="150px">
 </a>
 
 ## How to contribute?

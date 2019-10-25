@@ -4,24 +4,17 @@
 ###
 ### Checking installed apt packages
 ###
-### php5.6 
-### php7.2 
-### php7.3 
-### mysql 
-### less 
 ### snap 
 ### vim 
 ### git 
 ### snapd 
 ### build-essential 
-### nginx 
-### mysql-workbench
 ###
 #############################################################
 
 echo ">>> Checking installed apt packages "
 
-packages=(php5.6 php7.2 php7.3 mysql less snap vim git snapd build-essential nginx mysql-workbench) 
+packages=(snap vim git snapd build-essential) 
 for package in "${packages[@]}"
 do
     installed=$(dpkg --get-selections | grep $package ) 
@@ -38,30 +31,25 @@ done
 ###
 ### Checking installed snap packages
 ###
-### sass 
-### less 
-### composer 
-### node 
-### npm 
-### go 
 ### skype 
 ### slack 
 ### android-studio 
-### gitkraken 
+### gitkraken
+### datagrip
 ### code 
-### subl 
 ### whatsdesk 
 ### telegram-desktop 
 ### inkscape 
 ### photogimp 
 ### remmina 
-### postman htop
+### postman
+### htop
 ###
 #############################################################
 echo ""
 echo ">>> Checking installed apt packages "
 
-packages=(sass less composer node npm go skype slack android-studio gitkraken code subl whatsdesk telegram-desktop inkscape photogimp remmina postman htop)
+packages=(skype slack android-studio datagrip gitkraken code whatsdesk telegram-desktop inkscape photogimp remmina postman htop)
 for package in "${packages[@]}"
 do
     if which $package > /dev/null
