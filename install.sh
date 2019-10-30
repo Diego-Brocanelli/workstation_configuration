@@ -12,6 +12,8 @@ source scripts/programming_languages.sh
 source scripts/tools.sh
 # Installing vim configuration
 source scripts/vim_configuration.sh
+# Installing ZShel
+source scripts/zshell.sh
 # Installing config SO dracula theme
 source scripts/config_so_dracula_theme.sh
 # Installing checking installed packages

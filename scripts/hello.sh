@@ -3,7 +3,7 @@
 echo "#############################################################"
 echo "###"
 echo "### Welcome to"
-echo "### Configuration assistant"
+echo "### Configuration assistant 🤖"
 echo "###"
 echo "#############################################################"
 echo ""

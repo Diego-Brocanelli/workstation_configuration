@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-echo "Finished installations and configurations"
+echo "🏁 Finished installations and configurations"
 echo ""
 echo $(date +'%Y-%m-%d %T')
 echo ""
