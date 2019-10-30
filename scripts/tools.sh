@@ -21,51 +21,52 @@
 ###
 #############################################################
 
-echo ">>> Installing Tools (this may take some time)"
+echo ">>> 📦 Installing Tools (this may take some time)"
 
-echo "    Firacode Font...."
+echo "        🚀 Firacode Font...."
 sudo apt install fonts-firacode 1> /dev/null 2> /dev/stdout
 
-echo "    Gnome Tweak Tool...."
+echo "        🚀 Gnome Tweak Tool...."
 sudo apt install gnome-tweak-tool 1> /dev/null 2> /dev/stdout
 
-echo "    DataGrip...."
+echo "        🚀 DataGrip...."
 sudo snap install datagrip --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Skype...."
+echo "        🚀 Skype...."
 sudo snap install skype --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Slack...."
+echo "        🚀 Slack...."
 sudo snap install slack --classic 1> /dev/null 2> /dev/stdout
 
-echo "    VSCode...."
+echo "        🚀 VSCode...."
 sudo snap install code --classic 1> /dev/null 2> /dev/stdout
 
-echo "    Inkscape...."
+echo "        🚀 Inkscape...."
 sudo snap install inkscape 1> /dev/null 2> /dev/stdout
 
-echo "    Photogimp...."
+echo "        🚀 Photogimp...."
 sudo snap install photogimp 1> /dev/null 2> /dev/stdout
 
-echo "    Remmina...."
+echo "        🚀 Remmina...."
 sudo snap install remmina 1> /dev/null 2> /dev/stdout
 
-echo "    Postman...."
+echo "        🚀 Postman...."
 sudo snap install postman 1> /dev/null 2> /dev/stdout
 
-echo "    htop...."
+echo "        🚀 htop...."
 sudo snap install htop 1> /dev/null 2> /dev/stdout
 
-echo "    Whatsapp...."
+echo "        🚀 Whatsapp...."
 sudo snap install whatsdesk 1> /dev/null 2> /dev/stdout
 
-echo "    Telegram...."
+echo "        🚀 Telegram...."
 sudo snap install telegram-desktop 1> /dev/null 2> /dev/stdout
 
-echo "    Android Studio...."
+echo "        🚀 Android Studio...."
 sudo snap install android-studio --classic  1> /dev/null 2> /dev/stdout
 
-echo "    Git Kraken...."
+echo "        🚀 Git Kraken...."
 sudo snap install gitkraken  1> /dev/null 2> /dev/stdout
 
+echo ""
 echo ""
