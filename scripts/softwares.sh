@@ -34,3 +34,6 @@ git config --global core.editor vim
 
 echo "    SNAP...."
 sudo apt install snapd -y 1> /dev/null 2> /dev/stdout
+
+echo "    Synapse...."
+sudo add-apt-repository ppa:synapse-core/ppa -y && sudo apt-get update -y  && sudo apt-get install synapse -y 1> /dev/null 2> /dev/stdout
