@@ -7,7 +7,7 @@ source scripts/softwares.sh
 # Installing server
 source scripts/server.sh
 # Installing database
-source scripts/databse.sh
+source scripts/database.sh
 # Installing programming languages
 source scripts/programming_languages.sh
 # Installing tools
