@@ -4,7 +4,7 @@ Shell script to automate desktop installations and configurations for a web deve
 
 ## Requirements
 
-- Snaps packet support
+- `Snaps` packet support
 
 ## Compatibility
 
@@ -14,7 +14,7 @@ Tests were performed on Linux Mint 19.2 and Ubuntu 19.10
 
 You can edit the `setup.sh` file stating what you want to be installed or not.
 
-To do this simply open the file and inform with true or false what you want to install.
+To do this simply open the file and inform with `true` or `false` what you want to install.
 
 If you want an entire block not to be installed, hit `false` that it will not be executed.
 
@@ -44,6 +44,7 @@ The process will ask if you want to continue
   - Snap
   - Vim
 - **Server**
+  - Apache2  
   - Nginx 
 - **Database**
   - MySQL 
@@ -59,6 +60,7 @@ The process will ask if you want to continue
   - SASS
 - **Tools**
   - Android Studio
+  - DBeaver
   - Git Kraken
   - htop
   - Inkscape
@@ -104,3 +106,7 @@ Open an isseu so we can evolve the tool.
 ## License
 
 [MIT](LICENSE)
+
+## Documentation translation
+
+[PT-BR](/i18n/documentation/pt_br.md)

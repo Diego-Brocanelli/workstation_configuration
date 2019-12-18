@@ -4,6 +4,7 @@
 ###
 ### Installing tools
 ###
+### DBeaver
 ### MySQL Workbench
 ### Skype
 ### Slack

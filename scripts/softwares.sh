@@ -10,6 +10,7 @@
 ### Git
 ### Snap
 ### Vim
+### Synapse
 ###
 #############################################################
 
@@ -52,5 +53,7 @@ fi
 if [ $synapse == true ]
 then
     echo "    Synapse...."
-    sudo add-apt-repository ppa:synapse-core/ppa -y && sudo apt-get update -y  && sudo apt-get install synapse -y 1> /dev/null 2> /dev/stdout
+    sudo add-apt-repository ppa:synapse-core/ppa -y 1> /dev/null 2> /dev/stdout
+    sudo apt update -y 1> /dev/null 2> /dev/stdout 
+    sudo apt install synapse -y 1> /dev/null 2> /dev/stdout
 fi
