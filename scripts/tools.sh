@@ -23,46 +23,94 @@
 
 echo ">>> Installing Tools"
 
-echo "    MySQL Workbench...."
-sudo apt install mysql-workbench -y 1> /dev/null 2> /dev/stdout
+if [ $mysql_workbench == true]
+then
+    echo "    MySQL Workbench...."
+    sudo apt install mysql-workbench -y 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Skype...."
-sudo snap install skype --classic 1> /dev/null 2> /dev/stdout
+if [ $dbeaver == true ]
+then
+    echo "    DBeaver...."
+    sudo snap install dbeaver-ce --edge
+fi
 
-echo "    Slack...."
-sudo snap install slack --classic 1> /dev/null 2> /dev/stdout
+if [ $skype == true ]
+then
+    echo "    Skype...."
+    sudo snap install skype --classic 1> /dev/null 2> /dev/stdout
+fi 
 
-echo "    Sublime Text...."
-sudo snap install sublime-text --classic 1> /dev/null 2> /dev/stdout
+if [ $slack == true ]
+then
+    echo "    Slack...."
+    sudo snap install slack --classic 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    VSCode...."
-sudo snap install code --classic 1> /dev/null 2> /dev/stdout
+if [ $sublime_text == true ]
+then
+    echo "    Sublime Text...."
+    sudo snap install sublime-text --classic 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Inkscape...."
-sudo snap install inkscape 1> /dev/null 2> /dev/stdout
+if [ $code == true ]
+then
+    echo "    VSCode...."
+    sudo snap install code --classic 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Photogimp...."
-sudo snap install photogimp 1> /dev/null 2> /dev/stdout
+if [ $inkscape == true ]
+then
+    echo "    Inkscape...."
+    sudo snap install inkscape 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Remmina...."
-sudo snap install remmina 1> /dev/null 2> /dev/stdout
+if [ $photogimp == true ]
+then
+    echo "    Photogimp...."
+    sudo snap install photogimp 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Postman...."
-sudo snap install postman 1> /dev/null 2> /dev/stdout
+if [ $remmina == true ]
+then
+    echo "    Remmina...."
+    sudo snap install remmina 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    htop...."
-sudo snap install htop 1> /dev/null 2> /dev/stdout
+if [ $postman == true ]
+then
+    echo "    Postman...."
+    sudo snap install postman 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Whatsapp...."
-sudo snap install whatsdesk 1> /dev/null 2> /dev/stdout
+if [ $htop == true ]
+then
+    echo "    htop...."
+    sudo snap install htop 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Telegram...."
-sudo snap install telegram-desktop 1> /dev/null 2> /dev/stdout
+if [ $whatsdesk == true ]
+then
+    echo "    Whatsapp...."
+    sudo snap install whatsdesk 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Android Studio...."
-sudo snap install android-studio --classic  1> /dev/null 2> /dev/stdout
+if [ $telegram_desktop == true ]
+then
+    echo "    Telegram...."
+    sudo snap install telegram-desktop 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Git Kraken...."
-sudo snap install gitkraken  1> /dev/null 2> /dev/stdout
+if [ $android_studio == true ]
+then
+    echo "    Android Studio...."
+    sudo snap install android-studio --classic  1> /dev/null 2> /dev/stdout
+fi
+
+if [ $gitkraken == true ]
+then
+    echo "    Git Kraken...."
+    sudo snap install gitkraken  1> /dev/null 2> /dev/stdout
+fi
 
 echo ""

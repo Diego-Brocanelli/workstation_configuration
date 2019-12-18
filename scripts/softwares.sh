@@ -17,23 +17,40 @@ sudo apt update -y 1> /dev/null 2> /dev/stdout
 echo ">>> Installing software"
 echo "    Updating apt...."
 
-echo "    Build Essential...."
-sudo apt install build-essential -y 1> /dev/null 2> /dev/stdout
+if [ $build_essential == true ]
+then
+    echo "    Build Essential...."
+    sudo apt install build-essential -y 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    cURL...."
-sudo apt install curl -y 1> /dev/null 2> /dev/stdout
+if [ $curl == true ]
+then
+    echo "    cURL...."
+    sudo apt install curl -y 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Vim...."
-sudo apt install vim -y 1> /dev/null 2> /dev/stdout
+if [ $vim == true ]
+then
+    echo "    Vim...."
+    sudo apt install vim -y 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    Git...."
-sudo apt install git -y 1> /dev/null 2> /dev/stdout
+if [ $git == true ]
+then
+    echo "    Git...."
+    sudo apt install git -y 1> /dev/null 2> /dev/stdout
+    echo "    Configuration to vim editor on Git...."
+    git config --global core.editor vim
+fi
 
-echo "    Configuration to vim editor on Git...."
-git config --global core.editor vim
+if [ $snapd == true ]
+then
+    echo "    SNAP...."
+    sudo apt install snapd -y 1> /dev/null 2> /dev/stdout
+fi
 
-echo "    SNAP...."
-sudo apt install snapd -y 1> /dev/null 2> /dev/stdout
-
-echo "    Synapse...."
-sudo add-apt-repository ppa:synapse-core/ppa -y && sudo apt-get update -y  && sudo apt-get install synapse -y 1> /dev/null 2> /dev/stdout
+if [ $synapse == true ]
+then
+    echo "    Synapse...."
+    sudo add-apt-repository ppa:synapse-core/ppa -y && sudo apt-get update -y  && sudo apt-get install synapse -y 1> /dev/null 2> /dev/stdout
+fi
