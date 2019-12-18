@@ -10,6 +10,14 @@ Shell script to automate desktop installations and configurations for a web deve
 
 Tests were performed on Linux Mint 19.2 and Ubuntu 19.10
 
+## Setup
+
+You can edit the `setup.sh` file stating what you want to be installed or not.
+
+To do this simply open the file and inform with true or false what you want to install.
+
+If you want an entire block not to be installed, hit `false` that it will not be executed.
+
 ## How to run the script
 
 Download this repository.
