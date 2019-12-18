@@ -7,7 +7,9 @@
 ### php5.6 
 ### php7.2 
 ### php7.3 
+### php7.4
 ### mysql 
+### postgres
 ### less 
 ### snap 
 ### vim 
@@ -16,12 +18,13 @@
 ### build-essential 
 ### nginx 
 ### mysql-workbench
+### dbeaver
 ###
 #############################################################
 
 echo ">>> Checking installed apt packages "
 
-packages=(php5.6 php7.2 php7.3 mysql less snap vim git snapd build-essential nginx mysql-workbench curl) 
+packages=(php5.6 php7.2 php7.3 php7.4 mysql less snap vim git snapd build-essential apache2 nginx dbeaver mysql-workbench curl) 
 for package in "${packages[@]}"
 do
     installed=$(dpkg --get-selections | grep $package ) 

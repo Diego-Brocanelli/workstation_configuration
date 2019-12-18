@@ -24,7 +24,7 @@
 
 echo ">>> Installing Tools"
 
-if [ $mysql_workbench == true]
+if [ $mysql_workbench == true ]
 then
     echo "    MySQL Workbench...."
     sudo apt install mysql-workbench -y 1> /dev/null 2> /dev/stdout
