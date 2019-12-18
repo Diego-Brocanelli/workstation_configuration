@@ -20,13 +20,10 @@ If you want an entire block not to be installed, hit `false` that it will not be
 
 ## How to run the script
 
-Download this repository.
-
-Unzip.
-
-Go to the directory unzipped by the terminal.
-
-run the command:
+1. Download this repository.
+2. Unzip.
+3. Go to the directory unzipped by the terminal.
+4. Run the command:
 
 ```
 ./install.sh

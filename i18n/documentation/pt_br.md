@@ -20,13 +20,10 @@ Se você quiser que um bloco inteiro não seja instalado, inclua `false` para qu
 
 ## Como executar o script
 
-Faça o download deste repositório.
-
-Descompacte.
-
-Vá para o diretório descompactado pelo terminal.
-
-execute o comando com:
+1. Faça o download deste repositório.
+2. Descompacte.
+3. Vá para o diretório descompactado pelo terminal.
+4. Execute o comando com:
 
 ```
 ./install.sh
