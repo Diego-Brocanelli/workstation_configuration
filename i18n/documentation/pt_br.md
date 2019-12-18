@@ -102,8 +102,8 @@ Abra uma isseu para que possamos evoluir a ferramenta.
 
 ## Licença
 
-[MIT] (LICENÇA)
+[MIT](LICENÇA)
 
 ## Traduções da documentação
 
-[PT-BR] (/ i18n / documentation / pt_br.md)
+[PT-BR](/i18n/documentation/pt_br.md)
