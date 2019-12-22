@@ -7,6 +7,9 @@ echo "### Configuration assistant"
 echo "###"
 echo "#############################################################"
 echo ""
+echo "ALERT!!!"
+echo "....This script will update the apt packages on your computer!"
+echo ""
 echo ">>> Softwares to be installed"
 
 # Responsible to list the installed programs
