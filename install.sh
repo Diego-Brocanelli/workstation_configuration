@@ -3,10 +3,10 @@
 # Responsible for loading the file containing the information of what will be installed.
 source setup.sh
 
+date_start=$(date +'%Y-%m-%d %T')
+
 # Installing 
 source scripts/hello.sh
-
-date_start = $(date +'%Y-%m-%d %T')
 
 if [ $softwares == true ]
 then
