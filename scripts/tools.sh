@@ -24,91 +24,91 @@
 
 echo ">>> Installing Tools"
 
-if [ $mysql_workbench == true ]
+if [ ${packages[mysql-workbench]} == true ]
 then
     echo "    MySQL Workbench...."
     sudo apt install mysql-workbench -y 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $dbeaver == true ]
+if [ ${packages[dbeaver]} == true ]
 then
     echo "    DBeaver...."
     sudo snap install dbeaver-ce --edge
 fi
 
-if [ $skype == true ]
+if [ ${packages[skype]} == true ]
 then
     echo "    Skype...."
     sudo snap install skype --classic 1> /dev/null 2> /dev/stdout
 fi 
 
-if [ $slack == true ]
+if [ ${packages[slack]} == true ]
 then
     echo "    Slack...."
     sudo snap install slack --classic 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $sublime_text == true ]
+if [ ${packages[sublime-text]} == true ]
 then
     echo "    Sublime Text...."
     sudo snap install sublime-text --classic 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $code == true ]
+if [ ${packages[code]} == true ]
 then
     echo "    VSCode...."
     sudo snap install code --classic 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $inkscape == true ]
+if [ ${packages[inkscape]} == true ]
 then
     echo "    Inkscape...."
     sudo snap install inkscape 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $photogimp == true ]
+if [ ${packages[photogimp]} == true ]
 then
     echo "    Photogimp...."
     sudo snap install photogimp 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $remmina == true ]
+if [ ${packages[remmina]} == true ]
 then
     echo "    Remmina...."
     sudo snap install remmina 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $postman == true ]
+if [ ${packages[postman]} == true ]
 then
     echo "    Postman...."
     sudo snap install postman 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $htop == true ]
+if [ ${packages[htop]} == true ]
 then
     echo "    htop...."
     sudo snap install htop 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $whatsdesk == true ]
+if [ ${packages[whatsdesk]} == true ]
 then
     echo "    Whatsapp...."
     sudo snap install whatsdesk 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $telegram_desktop == true ]
+if [ ${packages[telegram-desktop]} == true ]
 then
     echo "    Telegram...."
     sudo snap install telegram-desktop 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $android_studio == true ]
+if [ ${packages[android_studio]} == true ]
 then
     echo "    Android Studio...."
     sudo snap install android-studio --classic  1> /dev/null 2> /dev/stdout
 fi
 
-if [ $gitkraken == true ]
+if [ ${packages[gitkraken]} == true ]
 then
     echo "    Git Kraken...."
     sudo snap install gitkraken  1> /dev/null 2> /dev/stdout

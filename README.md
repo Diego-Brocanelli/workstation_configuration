@@ -40,11 +40,14 @@ The process will ask if you want to continue
   - Git
   - Snap
   - Vim
+
 - **Server**
   - Apache2  
   - Nginx 
+
 - **Database**
   - MySQL 
+
 - **Programming languages**
   - Composer
   - Go
@@ -55,6 +58,7 @@ The process will ask if you want to continue
   - PHP7.3
   - PHP7.4
   - SASS
+
 - **Tools**
   - Android Studio
   - DBeaver

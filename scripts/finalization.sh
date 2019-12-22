@@ -2,7 +2,8 @@
 
 echo "Finished installations and configurations"
 echo ""
-echo $(date +'%Y-%m-%d %T')
+echo "Start proccess..." date_start
+echo "Finish..........." $(date +'%Y-%m-%d %T')
 echo ""
 echo "Open vim and execute the command :PluginInstall"
 echo "Execute the configuration of VSCode and Sublime Text"

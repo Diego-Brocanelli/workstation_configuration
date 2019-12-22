@@ -6,6 +6,8 @@ source setup.sh
 # Installing 
 source scripts/hello.sh
 
+date_start = $(date +'%Y-%m-%d %T')
+
 if [ $softwares == true ]
 then
     # Installing softwares
@@ -40,7 +42,7 @@ fi
 # The server settings is based on the settings made in the server step.
 source scripts/server_configuration.sh
 
-if [ $vim == true ]
+if [ ${item[vim]} == true ]
 then
 # Installing vim configuration
 source scripts/vim_configuration.sh

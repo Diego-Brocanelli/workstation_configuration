@@ -10,13 +10,13 @@
 echo ""
 echo ">>> Installing Database"
 
-if [ $mysql == true ]
+if [ ${packages[mysql]} == true ]
 then
     echo "    MySQL...."
     sudo apt install mysql-client mysql-server -y 1> /dev/null 2> /dev/stdout
 fi
 
-if [ $postgres == true ]
+if [ ${packages[postgresql]} == true ]
 then
     echo "   Postgres...."
     sudo apt-get install postgresql postgresql-contrib

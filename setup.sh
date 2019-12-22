@@ -5,54 +5,66 @@
 # If you want a block or item not to be installed, enter false. 
 #
 
+declare -A packages
+
 # Responsible for indicating which software will be installed. 
 softwares=true
-build_essential=true
-curl=true
-vim=true
-git=true
-snapd=true
-synapse=true
+
+packages[build-essential]=true
+packages[curl]=true
+packages[vim]=true
+packages[git]=true
+packages[snapd]=true
+packages[synapse]=true
+packages[aws-cli]=false
+packages[jenkins]=false
+packages[docker]=false
 
 # Responsible for indicating which server will be installed.
 server=true
-nginx=true
-apache2=false
+
+packages[nginx]=true
+packages[apache2]=false
 
 # Responsible for indicating which databese will be installed.
 database=true
-mysql=true
-postgres=false
+
+packages[mysql]=true
+packages[postgresql]=false
 
 # Responsible for indicating which programming languages will be installed.
 programming_languages=true
-node=true
-go=true 
-php56=true
-php72=false
-php73=true
-php74=true
-composer=true
-sass=true 
-less=false
+
+packages[node]=true
+packages[go]=true 
+packages[php5.6-fpm]=true
+packages[php7.2-fpm]=false
+packages[php7.3-fpm]=true
+packages[php7.4-fpm]=true
+packages[composer]=true
+packages[sass]=true 
+packages[less]=false
+packages[rust]=false
+packages[typescript]=false
 
 # Responsible for indicating which tools will be installed.
 tools=true
-mysql_workbench=true
-dbeaver=true
-skype=true
-slack=true
-sublime_text=true
-code=true
-inkscape=true
-photogimp=true
-remmina=true
-postman=true
-htop=true
-whatsdesk=true
-telegram_desktop=true
-android_studio=false
-gitkraken=true
+
+packages[mysql-workbench]=true
+packages[dbeaver]=true
+packages[skype]=true
+packages[slack]=true
+packages[subl]=true
+packages[code]=true
+packages[inkscape]=true
+packages[photogimp]=true
+packages[remmina]=true
+packages[postman]=true
+packages[htop]=true
+packages[whatsdesk]=true
+packages[telegram-desktop]=true
+packages[android-studio]=false
+packages[gitkraken]=true
 
 # Responsible for indicating if the operating system theme will be modified
 config_so_dracula_theme=true
