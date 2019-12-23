@@ -42,7 +42,7 @@ fi
 # The server settings is based on the settings made in the server step.
 source scripts/server_configuration.sh
 
-if [ ${item[vim]} == true ]
+if [ ${packages[vim]} == true ]
 then
 # Installing vim configuration
 source scripts/vim_configuration.sh

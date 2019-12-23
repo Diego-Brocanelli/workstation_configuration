@@ -1,20 +1,7 @@
 #!/bin/bash 
 
-#############################################################
-###
-### Installing software
-###
-### Update apt packages
-### Build Essential
-### cURL
-### Git
-### Snap
-### Vim
-### Synapse
-###
-#############################################################
-
 sudo apt update -y 1> /dev/null 2> /dev/stdout
+
 echo ">>> Installing software"
 echo "    Updating apt...."
 

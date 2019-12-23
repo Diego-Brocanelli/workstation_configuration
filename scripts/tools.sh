@@ -1,27 +1,5 @@
 #!/bin/bash 
 
-#############################################################
-###
-### Installing tools
-###
-### DBeaver
-### MySQL Workbench
-### Skype
-### Slack
-### Sublime Text
-### VSCode
-### Inkscape
-### Photogimp
-### Remmina
-### Postman
-### htop
-### Whatsapp
-### Telegram
-### Android Studio
-### Git Kraken
-###
-#############################################################
-
 echo ">>> Installing Tools"
 
 if [ ${packages[mysql-workbench]} == true ]
@@ -102,7 +80,7 @@ then
     sudo snap install telegram-desktop 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[android_studio]} == true ]
+if [ ${packages[android-studio]} == true ]
 then
     echo "    Android Studio...."
     sudo snap install android-studio --classic  1> /dev/null 2> /dev/stdout

@@ -1,20 +1,5 @@
 #!/bin/bash 
 
-#############################################################
-###
-### Installing Programming languages
-###
-### NodeJS
-### Go
-### PHP5.6
-### PHP7.2
-### PHP7.3
-### PHP7.4
-### Composer
-### SASS
-### LESS
-###
-#############################################################
 echo ">>> Installing Programming languages"
 
 if [ ${packages[node]} == true ]
