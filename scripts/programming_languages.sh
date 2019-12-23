@@ -95,10 +95,4 @@ then
     sudo snap install rust --edge 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[typescript]} == true ]
-then
-    echo "    Typescript...."
-    sudo snap install typescript --edge --classic 1> /dev/null 2> /dev/stdout
-fi
-
 echo ""

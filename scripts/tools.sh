@@ -33,7 +33,7 @@ fi
 if [ ${packages[dbeaver]} == true ]
 then
     echo "    DBeaver...."
-    sudo snap install dbeaver-ce --edge
+    sudo snap install dbeaver-ce 1> /dev/null 2> /dev/stdout
 fi
 
 if [ ${packages[skype]} == true ]

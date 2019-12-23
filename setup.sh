@@ -45,7 +45,6 @@ packages[composer]=true
 packages[sass]=true 
 packages[less]=false
 packages[rust]=false
-packages[typescript]=false
 
 # Responsible for indicating which tools will be installed.
 tools=true
