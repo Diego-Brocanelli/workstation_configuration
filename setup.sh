@@ -55,6 +55,7 @@ packages[skype]=true
 packages[slack]=true
 packages[sublime-text]=true
 packages[code]=true
+packages[atom]=false
 packages[inkscape]=true
 packages[photogimp]=true
 packages[remmina]=true

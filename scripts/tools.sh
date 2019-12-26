@@ -38,6 +38,11 @@ then
     sudo snap install code --classic 1> /dev/null 2> /dev/stdout
 fi
 
+if [ ${packages[atom]} == true ]
+then
+    sudo snap install atom --classic 1> /dev/null 2> /dev/stdout
+fi
+
 if [ ${packages[inkscape]} == true ]
 then
     echo "    Inkscape...."
