@@ -11,14 +11,16 @@
 echo ""
 echo ">>> Installing Server"
 
+sudo apt update -y 1> /dev/null 2> /dev/stdout
+
 if [ ${packages[nginx]} == true ]
 then
     echo "    Nginx...."
     sudo apt install nginx -y 1> /dev/null 2> /dev/stdout
     #copy example PHP 5.6
-    sudo cp ../files/nginx/example-php56.development /etc/nginx/sites-available/
+    sudo cp ../files/nginx/example-php56.development /etc/nginx/sites-available/example-php56.development
     #copy example PHP 7.4
-    sudo cp ../files/nginx/example-php74.development /etc/nginx/sites-available/
+    sudo cp ../files/nginx/example-php74.development /etc/nginx/sites-available/example-php74.development
 fi
 
 if [ ${packages[apache2]} == true ]

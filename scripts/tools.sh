@@ -2,6 +2,8 @@
 
 echo ">>> Installing Tools"
 
+sudo apt update -y 1> /dev/null 2> /dev/stdout
+
 if [ ${packages[mysql-workbench]} == true ]
 then
     echo "    MySQL Workbench...."
