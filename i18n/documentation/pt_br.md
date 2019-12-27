@@ -76,7 +76,7 @@ O processo perguntará se você deseja continuar
 
 ### Ubuntu 19.10
 
-Resultado da mudança de casa
+Resultado da mudança da home
 
 ![imagem tela Home](/prints/ubuntu_19.10/home.png)
 

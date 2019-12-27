@@ -7,9 +7,9 @@
 
 declare -A packages
 
-# Responsible for indicating which software will be installed. 
-softwares=true
-
+#
+# Softwares
+#
 packages[build-essential]=true
 packages[curl]=true
 packages[vim]=true
@@ -20,51 +20,53 @@ packages[aws-cli]=false
 packages[jenkins]=false
 packages[docker]=false
 
-# Responsible for indicating which server will be installed.
-server=true
-
+#
+# Servers
+#
 packages[nginx]=true
 packages[apache2]=false
 
-# Responsible for indicating which databese will be installed.
-database=true
-
+#
+# Databases
+#
 packages[mysql]=true
 packages[postgresql]=false
 
-# Responsible for indicating which programming languages will be installed.
-programming_languages=true
-
-packages[node]=true
-packages[go]=true 
+#
+# Programming Languages
+#
+packages[node]=false
+packages[go]=false 
 packages[php5.6-fpm]=true
 packages[php7.2-fpm]=false
 packages[php7.3-fpm]=true
 packages[php7.4-fpm]=true
 packages[composer]=true
-packages[sass]=true 
+packages[sass]=false 
 packages[less]=false
 packages[rust]=false
 
-# Responsible for indicating which tools will be installed.
-tools=true
-
+#
+# Tools
+#
 packages[mysql-workbench]=true
-packages[dbeaver]=true
-packages[skype]=true
-packages[slack]=true
-packages[sublime-text]=true
+packages[dbeaver]=false
+packages[skype]=false
+packages[slack]=false
 packages[code]=true
+packages[sublime-text]=true
 packages[atom]=false
-packages[inkscape]=true
-packages[photogimp]=true
-packages[remmina]=true
+packages[inkscape]=false
+packages[photogimp]=false
+packages[remmina]=false
 packages[postman]=true
 packages[htop]=true
-packages[whatsdesk]=true
-packages[telegram-desktop]=true
+packages[whatsdesk]=false
+packages[telegram-desktop]=false
 packages[android-studio]=false
 packages[gitkraken]=true
 
-# Responsible for indicating if the operating system theme will be modified
+#
+# Configure Dracula theme to SO
+#
 config_so_dracula_theme=true

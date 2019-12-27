@@ -8,35 +8,20 @@ date_start=$(date +'%Y-%m-%d %T')
 # Installing 
 source scripts/hello.sh
 
-if [ $softwares = true ]
-then
-    # Installing softwares
-    source scripts/softwares.sh
-fi
+# Installing softwares
+source scripts/softwares.sh
 
-if [ $server = true ]
-then
-    # Installing server
-    source scripts/server.sh
-fi
+# Installing server
+source scripts/server.sh
 
-if [ $database = true ]
-then
-    # Installing database
-    source scripts/database.sh
-fi
+# Installing database
+source scripts/database.sh
 
-if [ $programming_languages = true ]
-then
-    # Installing programming languages
-    source scripts/programming_languages.sh
-fi
+# Installing programming languages
+source scripts/programming_languages.sh
 
-if [ $tools = true ]
-then
-    # Installing tools
-    source scripts/tools.sh
-fi
+# Installing tools
+source scripts/tools.sh
 
 # Installing server configuration
 # The server settings is based on the settings made in the server step.
@@ -44,8 +29,8 @@ source scripts/server_configuration.sh
 
 if [ ${packages[vim]} = true ]
 then
-# Installing vim configuration
-source scripts/vim_configuration.sh
+    # Installing vim configuration
+    source scripts/vim_configuration.sh
 fi
 
 if [ $config_so_dracula_theme = true ]
