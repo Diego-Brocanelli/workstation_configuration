@@ -3,6 +3,8 @@
 # Responsible for loading the file containing the information of what will be installed.
 source setup.sh
 
+source scripts/log.sh
+
 date_start=$(date +'%Y-%m-%d %T')
 
 # Installing 
