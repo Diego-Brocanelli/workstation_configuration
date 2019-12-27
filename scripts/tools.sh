@@ -31,7 +31,7 @@ fi
 if [ ${packages[sublime-text]} == true ]
 then
     echo "    Sublime Text...."
-    sudo snap install sublime-text --classic 1> /dev/null 2> /dev/stdout
+    sudo apt install sublime-text 1> /dev/null 2> /dev/stdout
 fi
 
 if [ ${packages[code]} == true ]
