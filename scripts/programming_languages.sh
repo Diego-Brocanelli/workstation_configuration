@@ -4,20 +4,20 @@ echo ">>> Installing Programming languages"
 
 sudo apt update -y 1> /dev/null 2> /dev/stdout
 
-if [ ${packages[node]} == true ]
+if [ ${packages[node]} -eq true ]
 then
     echo "    NodeJS...."
     sudo snap install node --channel=10/stable --classic 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[go]} == true ]
+if [ ${packages[go]} -eq true ]
 then
     echo "    Go...."
     sudo snap install go --classic 1> /dev/null 2> /dev/stdout
     mkdir $HOME/go 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php5.6-fpm]} == true ] || [ ${packages[php7.2-fpm]} == true ] || [ ${packages[php7.3-fpm]} == true ] || [ ${packages[php7.4-fpm]} == true ]
+if [ ${packages[php5.6-fpm]} -eq true ] || [ ${packages[php7.2-fpm]} -eq true ] || [ ${packages[php7.3-fpm]} -eq true ] || [ ${packages[php7.4-fpm]} -eq true ]
 then
     echo "    ppa:ondrej/php...."
     sudo apt-get install python-software-properties -y 1> /dev/null 2> /dev/stdout
@@ -25,7 +25,7 @@ then
     sudo apt update 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php5.6-fpm]} == true ]
+if [ ${packages[php5.6-fpm]} -eq true ]
 then
     echo "    PHP5.6...."
     sudo apt install php5.6-fpm php5.6 php5.6-dev php5.6-cli -y 1> /dev/null 2> /dev/stdout
@@ -35,7 +35,7 @@ then
     sudo update-alternatives --set php /usr/bin/php5.6 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php7.2-fpm]} == true ]
+if [ ${packages[php7.2-fpm]} -eq true ]
 then
     echo "    PHP7.2...."
     sudo apt install php7.2-fpm php7.2 php7.2-dev php7.2-cli -y 1> /dev/null 2> /dev/stdout
@@ -45,7 +45,7 @@ then
     sudo update-alternatives --set php /usr/bin/php7.2 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php7.3-fpm]} == true ]
+if [ ${packages[php7.3-fpm]} -eq true ]
 then
     echo "    PHP7.3...."
     sudo apt install php7.3-fpm php7.3 php7.3-dev php7.3-cli -y 1> /dev/null 2> /dev/stdout
@@ -55,7 +55,7 @@ then
     sudo update-alternatives --set php /usr/bin/php7.3 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php7.4-fpm]} == true ]
+if [ ${packages[php7.4-fpm]} -eq true ]
 then
     echo "    PHP7.4...."
     sudo apt install php7.4-fpm php7.4 php7.4-dev php7.4-cli -y 1> /dev/null 2> /dev/stdout
@@ -65,26 +65,26 @@ then
     sudo update-alternatives --set php /usr/bin/php7.4 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php5.6-fpm]} == true ] || [ ${packages[php7.2-fpm]} == true ] || [ ${packages[php7.3-fpm]} == true ] || [ ${packages[php7.4-fpm]} == true ]
+if [ ${packages[php5.6-fpm]} -eq true ] || [ ${packages[php7.2-fpm]} -eq true ] || [ ${packages[php7.3-fpm]} -eq true ] || [ ${packages[php7.4-fpm]} -eq true ]
 then
     echo "    Composer...."
     php -r "readfile('https://getcomposer.org/installer');" | php 1> /dev/null 2> /dev/stdout
     sudo mv composer.phar /usr/bin/composer 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[sass]} == true ]
+if [ ${packages[sass]} -eq true ]
 then
     echo "    SASS...."
     sudo npm install -g sass 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[less]} == true ]
+if [ ${packages[less]} -eq true ]
 then
     echo "    Less...."
     sudo npm install -g less 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[rust]} == true ]
+if [ ${packages[rust]} -eq true ]
 then
     echo "    Rust...."
     sudo snap install rust --edge 1> /dev/null 2> /dev/stdout
