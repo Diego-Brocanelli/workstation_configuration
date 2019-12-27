@@ -13,7 +13,7 @@ echo ">>> Installing Server"
 
 sudo apt update -y 1> /dev/null 2> /dev/stdout
 
-if [ ${packages[nginx]} -eq true ]
+if [ ${packages[nginx]} = true ]
 then
     echo "    Nginx...."
     sudo apt install nginx -y 1> /dev/null 2> /dev/stdout
@@ -25,7 +25,7 @@ then
     sudo cp ./files/nginx/example-php74.development /etc/nginx/sites-available/example-php74.development
 fi
 
-if [ ${packages[apache2]} -eq true ]
+if [ ${packages[apache2]} = true ]
 then
     echo "    Apache2...."
     sudo apt install apache2 -y 1> /dev/null 2> /dev/stdout
