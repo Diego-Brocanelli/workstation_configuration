@@ -36,7 +36,7 @@ do
 
             echo -e "    $package .... \e[31m[NOT INSTALLED]\e[39m" 
 
-            register_log -e "    $package .... NOT INSTALLED"
+            register_log "    $package .... NOT INSTALLED"
         fi
     fi
 done
