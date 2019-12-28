@@ -30,13 +30,13 @@ do
 
             echo -e "    $package .... \e[32m[INSTALLED]\e[39m"
 
-            register_log "    $package .... \e[32m[INSTALLED]\e[39m"
+            register_log "    $package .... INSTALLED"
 
         else
 
             echo -e "    $package .... \e[31m[NOT INSTALLED]\e[39m" 
 
-            register_log -e "    $package .... \e[31m[NOT INSTALLED]\e[39m"
+            register_log -e "    $package .... NOT INSTALLED"
         fi
     fi
 done
@@ -45,7 +45,7 @@ if [ $config_so_dracula_theme = true ]
 then
     echo -e "    Dracula theme .... \e[32m[CONFIGURED]\e[39m"
 
-    register_log -e "    Dracula theme .... \e[32m[CONFIGURED]\e[39m"
+    register_log "    Dracula theme .... CONFIGURED"
 fi
 
 footer_log

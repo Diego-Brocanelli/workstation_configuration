@@ -5,8 +5,10 @@ echo ""
 echo "Start proccess..." $date_start
 echo "Finish..........." $(date +'%Y-%m-%d %T')
 echo ""
+echo "Log file generated in ./log/installation_log.txt"
+echo ""
 echo "Open vim and execute the command :PluginInstall"
-echo "Execute the configuration of VSCode and Sublime Text"
+echo "Execute the configuration of IDE"
 echo "Thanks"
 echo ""
 echo "System restart required"

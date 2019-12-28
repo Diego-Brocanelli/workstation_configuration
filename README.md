@@ -33,6 +33,12 @@ The process will ask if you want to continue
 
 **Because a lot of software is installed, it may take a long time, depending on your internet connection.**
 
+**Log**
+
+At the end of the process a log file is generated.
+
+Path: /log/installation_log.txt
+
 ## What will be installed
 
 - **Softwares**

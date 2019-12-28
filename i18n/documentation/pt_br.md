@@ -33,6 +33,12 @@ O processo perguntará se você deseja continuar
 
 **Como muitos softwares serão instalados, pode demorar, dependendo da sua conexão com a Internet.**
 
+**Log**
+
+No final do processo é gerado um arquivo de log.
+
+Caminho: /log/installation_log.txt
+
 ## O que será instalado
 
 - **Softwares**
