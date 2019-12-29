@@ -5,6 +5,8 @@ source setup.sh
 
 source scripts/log.sh
 
+source functions/text.sh
+
 date_start=$(date +'%Y-%m-%d %T')
 
 # Installing 

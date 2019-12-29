@@ -4,14 +4,18 @@
 # Responsible for installing the essential packages
 #--------------------------------------------------
 
-echo "    Updating packages...."
+title_echo "INSTALLING ESSENTIAL PACKAGES"
+
+line_echo "Updating packages"
 sudo apt update -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing build-essential package...."
+line_echo "build-essential package"
 sudo apt install build-essential -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing deb-conf-utils package...."
+line_echo "deb-conf-utils package"
 sudo apt install debconf-utils -y 1> /dev/null 2> /dev/stdout
 
-echo "    Installing binutils package...."
+line_echo "binutils package"
 sudo apt install binutils -y 1> /dev/null 2> /dev/stdout
+
+echo ""

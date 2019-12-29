@@ -1,26 +1,26 @@
 #!/bin/bash 
 
-echo "Finished installations and configurations"
+line_echo "Finished installations and configurations"
 echo ""
-echo "Start proccess..." $date_start
-echo "Finish..........." $(date +'%Y-%m-%d %T')
+line_echo "Start proccess..." $date_start
+line_echo "Finish..........." $(date +'%Y-%m-%d %T')
 echo ""
-echo "Log file generated in ./log/installation_log.txt"
+line_echo "Log file generated in ./log/installation_log.txt"
 echo ""
-echo "Open vim and execute the command :PluginInstall"
-echo "Execute the configuration of IDE"
-echo "Thanks"
+line_echo "Open vim and execute the command :PluginInstall"
+line_echo "Execute the configuration of IDE"
+line_echo "Thanks"
 echo ""
-echo "System restart required"
+line_echo "System restart required"
 echo ""
-echo ">>> Do you want to restart the system now? (1) Yes (0) No"
+title_echo "Do you want to restart the system now? (1) Yes (0) No"
 
 read restart
 
 if [ $restart = 1 ]
 then
-    echo ">>> Restarting the system"
+    title_echo "Restarting the system"
     reboot
 fi
-echo ">>> OK, thanks for using our script :)"
+title_echo "OK, thanks for using our script :)"
 exit

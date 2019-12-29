@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-echo ">>> Checking installed packages "
+title_echo "CHECKING INSTALLED PACKAGES"
 
 date_end=$(date +'%Y-%m-%d %T')
 
