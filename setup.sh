@@ -10,7 +10,6 @@ declare -A packages
 #
 # Softwares
 #
-packages[build-essential]=true
 packages[curl]=true
 packages[vim]=true
 packages[git]=true

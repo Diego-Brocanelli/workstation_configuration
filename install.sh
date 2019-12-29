@@ -10,6 +10,9 @@ date_start=$(date +'%Y-%m-%d %T')
 # Installing 
 source scripts/hello.sh
 
+# Essentials packages
+source scripts/essentials_packages.sh
+
 # Installing softwares
 source scripts/softwares.sh
 

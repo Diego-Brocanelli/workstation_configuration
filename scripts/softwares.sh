@@ -3,13 +3,6 @@
 sudo apt update -y 1> /dev/null 2> /dev/stdout
 
 echo ">>> Installing software"
-echo "    Updating apt...."
-
-if [ ${packages[build-essential]} = true ]
-then
-    echo "    Build Essential...."
-    sudo apt install build-essential -y 1> /dev/null 2> /dev/stdout
-fi
 
 if [ ${packages[curl]} = true ]
 then
