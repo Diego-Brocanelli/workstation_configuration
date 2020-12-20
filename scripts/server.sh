@@ -6,23 +6,31 @@ sudo apt update -y 1> /dev/null 2> /dev/stdout
 
 if [ ${packages[nginx]} = true ]
 then
-    line_echo "Nginx"
-    sudo apt install nginx -y 1> /dev/null 2> /dev/stdout
+    process_install_echo "nginx" "Nginx"
+    process_install_echo "fcgiwrap" "Fcgiwrap"
 
-    line_echo "Installing fcgiwrap package"
-    sudo apt install fcgiwrap -y 1> /dev/null 2> /dev/stdout
+    install_echo "Copying VHost file example PHP5.6"
 
-    line_echo "Copying VHost file example PHP5.6"
     sudo cp ./files/nginx/example-php56.development /etc/nginx/sites-available/example-php56.development
 
-    line_echo "Copying VHost file example PHP7.4"
+    success_install_echo "Finalized copy of PHP5.6 example VHost file"
+
+    install_echo "Copying VHost file example PHP7.4"
+
     sudo cp ./files/nginx/example-php74.development /etc/nginx/sites-available/example-php74.development
+
+    success_install_echo "Finalized copy of PHP8.0 example VHost file"
+
+    install_echo "Copying VHost file example PHP8.0"
+
+    sudo cp ./files/nginx/example-php80.development /etc/nginx/sites-available/example-php80.development
+
+    success_install_echo "Finalized copy of PHP8.0 example VHost file"
 fi
 
 if [ ${packages[apache2]} = true ]
 then
-    line_echo "Apache2"
-    sudo apt install apache2 -y 1> /dev/null 2> /dev/stdout
+    process_install_echo "apache2" "Apache2"
 fi
 
 echo ""
