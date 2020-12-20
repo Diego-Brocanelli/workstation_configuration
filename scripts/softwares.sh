@@ -6,23 +6,17 @@ title_echo "INSTALLING SOFTWARE"
 
 if [ ${packages[curl]} = true ]
 then
-    install_echo "Curl"
-    sudo apt install curl -y 1> /dev/null 2> /dev/stdout
-    success_install_echo "Curl"
+    process_install_echo "curl" "Curl"
 fi
 
 if [ ${packages[vim]} = true ]
 then
-    install_echo "Vim"
-    sudo apt install vim -y 1> /dev/null 2> /dev/stdout
-    success_install_echo "Vim"
+    process_install_echo "vim" "Vim"
 fi
 
 if [ ${packages[git]} = true ]
 then
-    install_echo "Git"
-    sudo apt install git -y 1> /dev/null 2> /dev/stdout
-    success_install_echo "Git"
+    process_install_echo "git" "Git"
 
     install_echo "Configuration to vim editor on Git"
     git config --global core.editor vim
@@ -31,30 +25,30 @@ fi
 
 if [ ${packages[synapse]} = true ]
 then
-    install_echo "Synapse"
+    install_echo "Starting installation: Synapse"
 
     sudo add-apt-repository ppa:synapse-core/ppa -y 1> /dev/null 2> /dev/stdout
     sudo apt update -y 1> /dev/null 2> /dev/stdout 
     sudo apt install synapse -y 1> /dev/null 2> /dev/stdout
 
-    install_echo "success_install_echo"
+    install_echo "Finished installation: Synapse"
 fi
 
 if [ ${packages[aws-cli]} = true ]
 then
-    install_echo "AWS Cli V.2"
+    install_echo "Starting installation: AWS Cli V.2"
     
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "./temp/awscliv2.zip" 1> /dev/null 2> /dev/stdout
     unzip ./temp/awscliv2.zip 1> /dev/null 2> /dev/stdout
     rm ./temp/awscliv2.zip 1> /dev/null 2> /dev/stdout
     rm ./aws 1> /dev/null 2> /dev/stdout
 
-    success_install_echo "AWS Cli V.2"
+    success_install_echo "Finished installation: AWS Cli V.2"
 fi
 
 if [ ${packages[docker]} = true ]
 then
-    install_echo "Docker"
+    install_echo "Starting installation: Docker"
 
     sudo apt update 1> /dev/null 2> /dev/stdout
     sudo apt install apt-transport-https ca-certificates curl software-properties-common 1> /dev/null 2> /dev/stdout
@@ -64,7 +58,7 @@ then
     sudo apt install docker-ce 1> /dev/null 2> /dev/stdout
     sudo systemctl status docker 1> /dev/null 2> /dev/stdout
 
-    success_install_echo "Docker"
+    success_install_echo "Finished installation: Docker"
 fi
 
 echo ""
