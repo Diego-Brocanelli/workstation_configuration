@@ -16,6 +16,11 @@ do
     if [ ${packages[$package]} = true ] 
     then
 
+        if [ $package = "set-vim-git"]
+        then
+            continue
+        fi
+
         installed=$(dpkg --get-selections | grep $package )
 
         if [ -n "$installed" ]
@@ -43,7 +48,7 @@ done
 
 if [ $config_so_dracula_theme = true ]
 then
-    echo -e "\u2705 Dracula theme .... \e[32m[CONFIGURED]\e[39m"
+    echo -e "\u2705 Dracula theme"
 
     register_log "    Dracula theme .... CONFIGURED"
 fi

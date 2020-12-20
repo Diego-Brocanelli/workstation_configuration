@@ -20,7 +20,7 @@ then
     success_install_echo "Finished installation: Go"
 fi
 
-if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true ]
+if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true || [ ${packages[php8.0-fpm]} = true ]
 then
     install_echo "Starting installation: ppa:ondrej/php"
 
@@ -91,6 +91,26 @@ then
     sudo update-alternatives --set php /usr/bin/php7.3 1> /dev/null 2> /dev/stdout
 fi
 
+if [ ${packages[php7.4-fpm]} = true ]
+then
+    install_echo "Starting installation: PHP7.4"
+    sudo apt install php7.4-fpm php7.4 php7.4-dev php7.4-cli -y 1> /dev/null 2> /dev/stdout
+    success_install_echo "Finished installation: PHP7.4"
+
+    install_echo "Starting installation: Extensions PHP7.4"
+    sudo apt-get install -y php7.4-fpm php7.4 php7.4-dev php7.4-cli php7.4-mbstring php7.4-gd php7.4-curl php7.4-xml php7.4-mysql php7.4-zip php7.4-xdebug -y 1> /dev/null 2> /dev/stdout
+    success_install_echo "Finished installation: Extensions PHP7.4"
+
+    if [ ${packages[nginx]} = true ]
+    then
+        install_echo "Starting Changing the php.ini file"
+        sudo sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.4/fpm/php.ini
+        success_install_echo "Finished Changing the php.ini file"
+    fi
+
+    sudo update-alternatives --set php /usr/bin/php7.4 1> /dev/null 2> /dev/stdout
+fi
+
 if [ ${packages[php8.0-fpm]} = true ]
 then
     install_echo "Starting installation: PHP8.0"
@@ -111,7 +131,7 @@ then
     sudo update-alternatives --set php /usr/bin/php8.0 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true ]
+if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true || ${packages[php8.0-fpm]} = true ]
 then
     install_echo "Starting installation: Composer"
     php -r "readfile('https://getcomposer.org/installer');" | php 1> /dev/null 2> /dev/stdout

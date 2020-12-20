@@ -74,7 +74,7 @@ then
 
     sudo update-alternatives --set php /usr/bin/php8.0 1> /dev/null 2> /dev/stdout
 
-    install_echo "Finished PHP8.0 configuration as default in the cli"
+    success_install_echo "Finished PHP8.0 configuration as default in the cli"
 fi
 
 echo ""

@@ -31,7 +31,7 @@ then
     sudo apt update -y 1> /dev/null 2> /dev/stdout 
     sudo apt install synapse -y 1> /dev/null 2> /dev/stdout
 
-    install_echo "Finished installation: Synapse"
+    success_install_echo "Finished installation: Synapse"
 fi
 
 if [ ${packages[aws-cli]} = true ]

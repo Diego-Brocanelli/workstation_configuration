@@ -14,7 +14,7 @@ then
     install_echo "Starting installation: DBeaver"
 
     wget -c -P ./temp https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb 1> /dev/null 2> /dev/stdout
-    sudo dpkg -i dbeaver-ce_latest_amd64.deb 1> /dev/null 2> /dev/stdout
+    sudo dpkg -i ./temp/dbeaver-ce_latest_amd64.deb 1> /dev/null 2> /dev/stdout
     rm ./temp/dbeaver-ce_latest_amd64.deb 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: DBeaver"
