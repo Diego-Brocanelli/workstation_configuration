@@ -12,11 +12,10 @@ declare -A packages
 #
 packages[curl]=true
 packages[vim]=true
+packages[set-vim-git]=true
 packages[git]=true
-packages[snapd]=true
 packages[synapse]=true
 packages[aws-cli]=false
-packages[jenkins]=false
 packages[docker]=false
 
 #
@@ -40,6 +39,7 @@ packages[php5.6-fpm]=true
 packages[php7.2-fpm]=false
 packages[php7.3-fpm]=true
 packages[php7.4-fpm]=true
+packages[php8.0-fpm]=true
 packages[composer]=true
 packages[sass]=false 
 packages[less]=false
@@ -56,13 +56,11 @@ packages[code]=true
 packages[sublime-text]=true
 packages[atom]=false
 packages[inkscape]=false
-packages[photogimp]=false
+packages[gimp]=false
 packages[remmina]=false
-packages[postman]=true
+packages[insomnia]=true
 packages[htop]=true
-packages[whatsdesk]=false
 packages[telegram-desktop]=false
-packages[android-studio]=false
 packages[gitkraken]=true
 
 #
