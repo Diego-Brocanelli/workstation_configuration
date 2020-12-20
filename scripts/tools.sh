@@ -53,16 +53,16 @@ fi
 
 if [ ${packages[code]} = true ]
 then
-    install_echo "Starting installation: Git Kraken"
-    
+    install_echo "Starting installation: VSCode"
+
     wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg 1> /dev/null 2> /dev/stdout
     sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ 1> /dev/null 2> /dev/stdout
     sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' 1> /dev/null 2> /dev/stdout
-    sudo apt install apt-transport-https
+    sudo apt install apt-transport-https 1> /dev/null 2> /dev/stdout
     update_packages
-    sudo apt install code
+    sudo apt install code 1> /dev/null 2> /dev/stdout
 
-    success_install_echo "Finished installation: Git Kraken"
+    success_install_echo "Finished installation: VSCode"
 fi
 
 if [ ${packages[atom]} = true ]
