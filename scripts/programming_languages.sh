@@ -6,15 +6,19 @@ sudo apt update -y 1> /dev/null 2> /dev/stdout
 
 if [ ${packages[node]} = true ]
 then
-    line_echo "NodeJS"
-    sudo snap install node --channel=10/stable --classic 1> /dev/null 2> /dev/stdout
+    install_echo "NodeJS"
+    sudo apt install nodejs 1> /dev/null 2> /dev/stdout
 fi
 
 if [ ${packages[go]} = true ]
 then
-    line_echo "Go"
-    sudo snap install go --classic 1> /dev/null 2> /dev/stdout
+    install_echo "Starting installation: Go"
+
+    wget -c -P ./temp wget https://golang.org/dl/go1.15.6.linux-amd64.tar.gz 1> /dev/null 2> /dev/stdout
+    rm ./temp/go1.15.6.linux-amd64.tar.gz
     mkdir $HOME/go 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Finished installation: Go"
 fi
 
 if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true ]
@@ -76,21 +80,21 @@ then
     sudo update-alternatives --set php /usr/bin/php7.3 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php7.4-fpm]} = true ]
+if [ ${packages[php8.0-fpm]} = true ]
 then
-    line_echo "PHP7.4"
-    sudo apt install php7.4-fpm php7.4 php7.4-dev php7.4-cli -y 1> /dev/null 2> /dev/stdout
+    line_echo "PHP8.0"
+    sudo apt install php8.0-fpm php8.0 php8.0-dev php8.0-cli -y 1> /dev/null 2> /dev/stdout
     
-    line_echo "Extensions PHP7.4"
-    sudo apt-get install -y php7.4-fpm php7.4 php7.4-dev php7.4-cli php7.4-mbstring php7.4-gd php7.4-curl php7.4-xml php7.4-mysql php7.4-zip php7.4-xdebug -y 1> /dev/null 2> /dev/stdout
+    line_echo "Extensions PHP8.0"
+    sudo apt-get install -y php8.0-fpm php8.0 php8.0-dev php8.0-cli php8.0-mbstring php8.0-gd php8.0-curl php8.0-xml php8.0-mysql php8.0-zip php8.0-xdebug -y 1> /dev/null 2> /dev/stdout
 
     if [ ${packages[nginx]} = true ]
     then
         line_echo "Changing the php.ini file"
-        sudo sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/7.4/fpm/php.ini
+        sudo sed -i "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/" /etc/php/8.0/fpm/php.ini
     fi
 
-    sudo update-alternatives --set php /usr/bin/php7.4 1> /dev/null 2> /dev/stdout
+    sudo update-alternatives --set php /usr/bin/php8.0 1> /dev/null 2> /dev/stdout
 fi
 
 if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true ]
@@ -114,8 +118,7 @@ fi
 
 if [ ${packages[rust]} = true ]
 then
-    line_echo "Rust"
-    sudo snap install rust --edge 1> /dev/null 2> /dev/stdout
+    process_install_echo "rustc" "Rust"
 fi
 
 echo ""
