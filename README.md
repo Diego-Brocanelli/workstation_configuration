@@ -2,10 +2,6 @@
 
 Shell script to automate desktop installations and configurations for a web developer.
 
-## Requirements
-
-- `Snaps` packet support
-
 ## Compatibility
 
 Tests were performed on Linux Mint 19.2 and Ubuntu 19.10
@@ -41,46 +37,60 @@ Path: /log/installation_log.txt
 
 ## What will be installed
 
-- **Softwares**
-  - Build Essential
-  - Git
-  - Snap
-  - Vim
+**Softwares**
 
-- **Server**
-  - Apache2  
-  - Nginx 
+| Resource | Name |
+|---   |---|
+| Softwares | Build Essential |
+| Softwares | Git |
+| Softwares | Vim |
 
-- **Database**
-  - MySQL 
+**Server**
 
-- **Programming languages**
-  - Composer
-  - Go
-  - LESS
-  - NodeJS
-  - PHP5.6
-  - PHP7.2
-  - PHP7.3
-  - PHP7.4
-  - SASS
+| Resource | Name |
+|---   |---|
+| Server | Apache2 |
+| Server | Nginx |
+
+**Database**
+ 
+| Resource | Name |
+|---   |---|
+| Database | MySQL |
+| Database | PostgreSQL |
+
+**Programming languages**
+
+| Resource | Name |
+|---   |---|
+| Programming languages | Composer |
+| Programming languages | Go |
+| Programming languages | LESS |
+| Programming languages | NodeJS |
+| Programming languages | PHP5.6 |
+| Programming languages | PHP7.2 |
+| Programming languages | PHP7.3 |
+| Programming languages | PHP7.4 |
+| Programming languages | PHP8.0 |
+| Programming languages | SASS |
 
 - **Tools**
-  - Android Studio
-  - DBeaver
-  - Git Kraken
-  - htop
-  - Inkscape
-  - MySQL Workbench
-  - Photogimp
-  - Postman
-  - Remmina
-  - Skype
-  - Slack
-  - Sublime Text
-  - Telegram
-  - VSCode
-  - Whatsapp
+
+| Resource | Name |
+|---   |---|
+| Tools | DBeaver |
+| Tools | Git Kraken |
+| Tools | htop |
+| Tools | Inkscape |
+| Tools | MySQL Workbench |
+| Tools | Gimp |
+| Tools | Insomnia |
+| Tools | Remmina |
+| Tools | Skype |
+| Tools | Slack |
+| Tools | Sublime Text |
+| Tools | Telegram |
+| Tools | VSCode |
 
 ## Result
 
@@ -94,11 +104,14 @@ Result of changing directories
 
 ![A dir image](/prints/ubuntu_19.10/dir.png)
 
-## Contributors
+## Creator
 
 <a href="https://www.diegobrocanelli.com.br/">
 <img src="https://avatars2.githubusercontent.com/u/4108889?s=460&v=4" width="150px">
 </a>
+
+## Contributors
+
 
 <a href="https://twitter.com/jeancabral">
 <img src="https://avatars1.githubusercontent.com/u/2077886?s=460&v=4" width="150px">
@@ -116,4 +129,5 @@ Open an isseu so we can evolve the tool.
 
 ## Documentation translation
 
-[PT-BR](/i18n/documentation/pt_br.md)
+[EN](./README.md)
+[PT-BR](/docs/pt_br.md)
