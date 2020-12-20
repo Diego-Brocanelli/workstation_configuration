@@ -20,7 +20,7 @@ then
     success_install_echo "Finished installation: Go"
 fi
 
-if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true || [ ${packages[php8.0-fpm]} = true ]
+if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true ] || [ ${packages[php8.0-fpm]} = true ]
 then
     install_echo "Starting installation: ppa:ondrej/php"
 
@@ -131,7 +131,7 @@ then
     sudo update-alternatives --set php /usr/bin/php8.0 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true || ${packages[php8.0-fpm]} = true ]
+if [ ${packages[php5.6-fpm]} = true ] || [ ${packages[php7.2-fpm]} = true ] || [ ${packages[php7.3-fpm]} = true ] || [ ${packages[php7.4-fpm]} = true ] || [ ${packages[php8.0-fpm]} = true ]
 then
     install_echo "Starting installation: Composer"
     php -r "readfile('https://getcomposer.org/installer');" | php 1> /dev/null 2> /dev/stdout
