@@ -12,92 +12,156 @@ fi
 
 if [ ${packages[dbeaver]} = true ]
 then
-    line_echo "DBeaver"
-    sudo snap install dbeaver-ce 1> /dev/null 2> /dev/stdout
+    install_echo "DBeaver"
+
+    wget -c -P ./temp https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb 1> /dev/null 2> /dev/stdout
+    sudo dpkg -i dbeaver-ce_latest_amd64.deb 1> /dev/null 2> /dev/stdout
+    rm ./temp/dbeaver-ce_latest_amd64.deb 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "DBeaver"
 fi
 
 if [ ${packages[skype]} = true ]
 then
-    line_echo "Skype"
-    sudo snap install skype --classic 1> /dev/null 2> /dev/stdout
+    install_echo "Skype"
+
+    wget -c -P ./temp https://go.skype.com/skypeforlinux-64.deb 1> /dev/null 2> /dev/stdout
+    sudo apt install ./temp/skypeforlinux-64.deb 1> /dev/null 2> /dev/stdout
+    rm ./temp/skypeforlinux-64.deb 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Skype"
 fi 
 
 if [ ${packages[slack]} = true ]
 then
-    line_echo "Slack"
-    sudo snap install slack --classic 1> /dev/null 2> /dev/stdout
+    install_echo "Slack"
+
+    wget -c -P ./temp https://downloads.slack-edge.com/linux_releases/slack-desktop-4.12.0-amd64.deb
+    sudo apt install ./temp https://downloads.slack-edge.com/linux_releases/slack-desktop-4.12.0-amd64.deb 1> /dev/null 2> /dev/stdout
+    rm ./temp/slack-desktop-4.12.0-amd64.deb 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Skype"
 fi
 
 if [ ${packages[sublime-text]} = true ]
 then
-    line_echo "Sublime Text"
-    sudo snap install sublime-text --classic 1> /dev/null 2> /dev/stdout
+    install_echo "Sublime Text 3"
+
+    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - 1> /dev/null 2> /dev/stdout
+    sudo apt install apt-transport-https 1> /dev/null 2> /dev/stdout
+    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list 1> /dev/null 2> /dev/stdout
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install sublime-text 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Sublime Text 3"
 fi
 
 if [ ${packages[code]} = true ]
 then
-    line_echo "VSCode"
-    sudo snap install code --classic 1> /dev/null 2> /dev/stdout
+    install_echo "VSCode"
+
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg 1> /dev/null 2> /dev/stdout
+    sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ 1> /dev/null 2> /dev/stdout
+    sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' 1> /dev/null 2> /dev/stdout
+    sudo apt install apt-transport-https 1> /dev/null 2> /dev/stdout
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install code 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "VSCode"
 fi
 
 if [ ${packages[atom]} = true ]
 then
-    line_echo "Atom"
-    sudo snap install atom --classic 1> /dev/null 2> /dev/stdout
+    install_echo "Atom"
+
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install software-properties-common apt-transport-https wget 1> /dev/null 2> /dev/stdout
+    wget -q https://packagecloud.io/AtomEditor/atom/gpgkey -O- | sudo apt-key add - 1> /dev/null 2> /dev/stdout
+    sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" 1> /dev/null 2> /dev/stdout
+    sudo apt install atom 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Atom"
 fi
 
 if [ ${packages[inkscape]} = true ]
 then
-    line_echo "Inkscape"
-    sudo snap install inkscape 1> /dev/null 2> /dev/stdout
+    install_echo "Inkscape"
+
+    sudo add-apt-repository ppa:inkscape.dev/stable-daily 1> /dev/null 2> /dev/stdout
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install inkscape 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Inkscape"
 fi
 
-if [ ${packages[photogimp]} = true ]
+if [ ${packages[gimp]} = true ]
 then
-    line_echo "Photogimp"
-    sudo snap install photogimp 1> /dev/null 2> /dev/stdout
+    install_echo "Gimp"
+
+    sudo apt autoremove gimp gimp-plugin-registry 1> /dev/null 2> /dev/stdout
+    sudo add-apt-repository ppa:otto-kesselgulasch/gimp 1> /dev/null 2> /dev/stdout
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install gimp 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Gimp"
 fi
 
 if [ ${packages[remmina]} = true ]
 then
-    line_echo "Remmina"
-    sudo snap install remmina 1> /dev/null 2> /dev/stdout
+    install_echo "Remmina"
+
+    sudo apt-add-repository ppa:remmina-ppa-team/remmina-next 1> /dev/null 2> /dev/stdout
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Remmina"
 fi
 
-if [ ${packages[postman]} = true ]
+if [ ${packages[insomnia]} = true ]
 then
-    line_echo "Postman"
-    sudo snap install postman 1> /dev/null 2> /dev/stdout
+    install_echo "Insomnia"
+
+    echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
+        | sudo tee -a /etc/apt/sources.list.d/insomnia.list 1> /dev/null 2> /dev/stdout
+
+    wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
+        | sudo apt-key add - 1> /dev/null 2> /dev/stdout
+
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install insomnia 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Insomnia"
 fi
 
 if [ ${packages[htop]} = true ]
 then
-    line_echo "htop"
-    sudo snap install htop 1> /dev/null 2> /dev/stdout
-fi
+    install_echo "htop"
 
-if [ ${packages[whatsdesk]} = true ]
-then
-    line_echo "Whatsapp"
-    sudo snap install whatsdesk 1> /dev/null 2> /dev/stdout
+    sudo apt install htop 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "htop"
 fi
 
 if [ ${packages[telegram-desktop]} = true ]
 then
-    line_echo "Telegram"
-    sudo snap install telegram-desktop 1> /dev/null 2> /dev/stdout
-fi
+    install_echo "Telegram"
 
-if [ ${packages[android-studio]} = true ]
-then
-    line_echo "Android Studio"
-    sudo snap install android-studio --classic  1> /dev/null 2> /dev/stdout
+    sudo add-apt-repository ppa:atareao/telegram 1> /dev/null 2> /dev/stdout
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install telegram 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Telegram"
 fi
 
 if [ ${packages[gitkraken]} = true ]
 then
-    line_echo "Git Kraken"
-    sudo snap install gitkraken  1> /dev/null 2> /dev/stdout
+    install_echo "Git Kraken"
+
+    wget -c -P ./temp https://release.gitkraken.com/linux/gitkraken-amd64.deb 1> /dev/null 2> /dev/stdout
+    sudo dpkg -i gitkraken-amd64.deb 1> /dev/null 2> /dev/stdout
+    rm ./temp/gitkraken-amd64.deb 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Git Kraken"
 fi
 
 echo ""
