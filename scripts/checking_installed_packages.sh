@@ -16,7 +16,7 @@ do
     if [ ${packages[$package]} = true ] 
     then
 
-        if [ $package = "set-vim-git"]
+        if [ $package = "set-vim-git" ]
         then
             continue
         fi
