@@ -2,7 +2,7 @@
 
 title_echo "INSTALLING TOOLS"
 
-sudo apt update -y 1> /dev/null 2> /dev/stdout
+update_packages
 
 if [ ${packages[mysql-workbench]} = true ]
 then
@@ -49,7 +49,7 @@ then
     wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - 1> /dev/null 2> /dev/stdout
     sudo apt install apt-transport-https 1> /dev/null 2> /dev/stdout
     echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list 1> /dev/null 2> /dev/stdout
-    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    update_packages
     sudo apt install sublime-text 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: Sublime Text 3"
@@ -57,13 +57,13 @@ fi
 
 if [ ${packages[code]} = true ]
 then
-    install_echo "Starting installation: Sublime VSCode"
+    install_echo "Starting installation: VSCode"
 
     wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg 1> /dev/null 2> /dev/stdout
     sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ 1> /dev/null 2> /dev/stdout
     sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' 1> /dev/null 2> /dev/stdout
     sudo apt install apt-transport-https 1> /dev/null 2> /dev/stdout
-    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    update_packages
     sudo apt install code 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: VSCode"
@@ -73,7 +73,7 @@ if [ ${packages[atom]} = true ]
 then
     install_echo "Starting installation: Atom"
 
-    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    update_packages
     sudo apt install software-properties-common apt-transport-https wget 1> /dev/null 2> /dev/stdout
     wget -q https://packagecloud.io/AtomEditor/atom/gpgkey -O- | sudo apt-key add - 1> /dev/null 2> /dev/stdout
     sudo add-apt-repository "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" 1> /dev/null 2> /dev/stdout
@@ -87,7 +87,7 @@ then
     install_echo "Starting installation: Inkscape"
 
     sudo add-apt-repository ppa:inkscape.dev/stable-daily 1> /dev/null 2> /dev/stdout
-    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    update_packages
     sudo apt install inkscape 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: Inkscape"
@@ -99,7 +99,7 @@ then
 
     sudo apt autoremove gimp gimp-plugin-registry 1> /dev/null 2> /dev/stdout
     sudo add-apt-repository ppa:otto-kesselgulasch/gimp 1> /dev/null 2> /dev/stdout
-    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    update_packages
     sudo apt install gimp 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: Gimp"
@@ -110,7 +110,7 @@ then
     install_echo "Starting installation: Remmina"
 
     sudo apt-add-repository ppa:remmina-ppa-team/remmina-next 1> /dev/null 2> /dev/stdout
-    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    update_packages
     sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: Remmina"
@@ -126,7 +126,7 @@ then
     wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
         | sudo apt-key add - 1> /dev/null 2> /dev/stdout
 
-    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    update_packages
     sudo apt install insomnia 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: Insomnia"
@@ -146,7 +146,7 @@ then
     install_echo "Starting installation: Telegram"
 
     sudo add-apt-repository ppa:atareao/telegram 1> /dev/null 2> /dev/stdout
-    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    update_packages
     sudo apt install telegram 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: Telegram"

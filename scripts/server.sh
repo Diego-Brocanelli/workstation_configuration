@@ -2,7 +2,7 @@
 
 title_echo "INSTALLING SERVER"
 
-sudo apt update -y 1> /dev/null 2> /dev/stdout
+update_packages
 
 if [ ${packages[nginx]} = true ]
 then

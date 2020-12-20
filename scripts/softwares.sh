@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-sudo apt update -y 1> /dev/null 2> /dev/stdout
-
 title_echo "INSTALLING SOFTWARE"
+
+update_packages
 
 if [ ${packages[curl]} = true ]
 then
@@ -28,7 +28,7 @@ then
     install_echo "Starting installation: Synapse"
 
     sudo add-apt-repository ppa:synapse-core/ppa -y 1> /dev/null 2> /dev/stdout
-    sudo apt update -y 1> /dev/null 2> /dev/stdout 
+    update_packages
     sudo apt install synapse -y 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: Synapse"

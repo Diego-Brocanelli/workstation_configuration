@@ -6,6 +6,7 @@ source setup.sh
 source scripts/log.sh
 
 source functions/text.sh
+source functions/packages.sh
 
 date_start=$(date +'%Y-%m-%d %T')
 
