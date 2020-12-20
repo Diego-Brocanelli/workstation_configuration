@@ -7,6 +7,7 @@
 title_echo "INSTALLING ESSENTIAL PACKAGES"
 
 update_packages
+tput cuu1; tput dl1 
 
 process_install_echo "build-essential" "Build Essential"
 process_install_echo "debconf-utils" "Debconf Utils"

@@ -59,7 +59,7 @@ then
     sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/ 1> /dev/null 2> /dev/stdout
     sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' 1> /dev/null 2> /dev/stdout
     sudo apt install apt-transport-https 1> /dev/null 2> /dev/stdout
-    update_packages
+    sudo apt update 1> /dev/null 2> /dev/stdout
     sudo apt install code 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: VSCode"

@@ -19,7 +19,7 @@ then
 
     sudo cp ./files/nginx/example-php74.development /etc/nginx/sites-available/example-php74.development
 
-    success_install_echo "Finalized copy of PHP8.0 example VHost file"
+    success_install_echo "Finalized copy of PHP7.4 example VHost file"
 
     install_echo "Copying VHost file example PHP8.0"
 
