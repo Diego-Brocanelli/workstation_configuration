@@ -4,14 +4,14 @@ title_echo "Installing Database"
 
 if [ ${packages[mysql]} = true ]
 then
-    line_echo "MySQL"
-    sudo apt install mysql-client mysql-server -y 1> /dev/null 2> /dev/stdout
+    process_install_echo "mysql-client" "MySql Client"
+    process_install_echo "mysql-serve" "MySql Serve"
 fi
 
 if [ ${packages[postgresql]} = true ]
 then
-    line_echo "Postgres"
-    sudo apt-get install postgresql postgresql-contrib
+    process_install_echo "postgresql" "PostgreSQL"
+    process_install_echo "postgresql-contrib" "PostgreSQL Contrib"
 fi
 
 echo ""
