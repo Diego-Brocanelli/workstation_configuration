@@ -13,16 +13,27 @@
 
 title_echo "CONFIGURATE TO VIM"
 
-line_echo "Create to dir .vim"
+install_echo "Create to dir .vim"
 mkdir ~/.vim  1> /dev/null 2> /dev/stdout
+success_install_echo "Finished creating the .vim directory"
 
-line_echo "Create to dir .vim/colors"
+install_echo "Create to dir .vim/colors"
 mkdir ~/.vim/colors  1> /dev/null 2> /dev/stdout
+success_install_echo "Finished creating the .vim/colors directory"
 
-line_echo "Cloning to Vundle"
+install_echo "Cloning Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 1> /dev/null 2> /dev/stdout
+success_install_echo "Cloned Vundle finished"
 
-line_echo "Copy to .vimrc"
+install_echo "Copying .vimrc file to the ~ / directory"
 cp .vimrc ~/  1> /dev/null 2> /dev/stdout
+success_install_echo "Finished copying .vimrc file to the ~ / directory"
+
+if [ ${packages[set-vim-git]} = true ]
+then
+    install_echo "Setting vim as the default editor in Git"
+    git config --global core.editor vim
+    success_install_echo "Finalized definition of vim as default editor in Git"
+fi
 
 echo ""
