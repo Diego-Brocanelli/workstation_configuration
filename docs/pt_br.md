@@ -2,13 +2,9 @@
 
 Script shell para automatizar instalações e configurações estação de trabalho para um desenvolvedor web.
 
-## Requisitos
-
-- Suporte a pacotes de `snaps`
-
 ## Compatibilidade
 
-Os testes foram realizados no Linux Mint 19.2 e Ubuntu 19.10
+Os testes foram realizados no Linux Mint 19.2 e 20.0 e Ubuntu 19.10 e 20.04
 
 ## Configurações
 
@@ -41,42 +37,60 @@ Caminho: /log/installation_log.txt
 
 ## O que será instalado
 
-- **Softwares**
-  - Build Essential
-  - Git
-  - Snap
-  - Vim
-- **Servidor**
-  - Apache2
-  - Nginx
-- **Banco de dados**
-  - MySQL
-- **Linguagens de programação**
-  - Composer
-  - Go
-  - LESS
-  - NodeJS
-  - PHP5.6
-  - PHP7.2
-  - PHP7.3
-  - PHP7.4
-  - SASS
-- **Ferramentas**
-  - Android Studio
-  - DBeaver
-  - Git Kraken
-  - htop
-  - Inkscape
-  - MySQL Workbench
-  - Photogimp
-  - Postman
-  - Remmina
-  - Skype
-  - Slack
-  - Sublime Text
-  - Telegram
-  - VSCode
-  - Whatsapp
+**Softwares**
+
+| Resource | Name |
+|---   |---|
+| Softwares | Build Essential |
+| Softwares | Git |
+| Softwares | Vim |
+
+**Servidores**
+
+| Resource | Name |
+|---   |---|
+| Server | Apache2 |
+| Server | Nginx |
+
+**Banco de dados**
+ 
+| Resource | Name |
+|---   |---|
+| Database | MySQL |
+| Database | PostgreSQL |
+
+**Linguagens de programação**
+
+| Resource | Name |
+|---   |---|
+| Programming languages | Composer |
+| Programming languages | Go |
+| Programming languages | LESS |
+| Programming languages | NodeJS |
+| Programming languages | PHP5.6 |
+| Programming languages | PHP7.2 |
+| Programming languages | PHP7.3 |
+| Programming languages | PHP7.4 |
+| Programming languages | PHP8.0 |
+| Programming languages | SASS |
+
+- **Ferraments**
+
+| Resource | Name |
+|---   |---|
+| Tools | DBeaver |
+| Tools | Git Kraken |
+| Tools | htop |
+| Tools | Inkscape |
+| Tools | MySQL Workbench |
+| Tools | Gimp |
+| Tools | Insomnia |
+| Tools | Remmina |
+| Tools | Skype |
+| Tools | Slack |
+| Tools | Sublime Text |
+| Tools | Telegram |
+| Tools | VSCode |
 
 ## Resultado
 
@@ -90,11 +104,13 @@ Resultado da mudança de diretórios
 
 ![Uma imgem dos diretórios](/prints/ubuntu_19.10/dir.png)
 
-## Colaboradores
+## Criador
 
 <a href="https://www.diegobrocanelli.com.br/">
-<img src = "https://avatars2.githubusercontent.com/u/4108889?s=460&v=4" width = "150px">
+<img src="https://avatars2.githubusercontent.com/u/4108889?s=460&v=4" width="150px">
 </a>
+
+## Colaboradores
 
 <a href="https://twitter.com/jeancabral">
 <img src = "https://avatars1.githubusercontent.com/u/2077886?s=460&v=4" width = "150px">
@@ -112,4 +128,5 @@ Abra uma isseu para que possamos evoluir a ferramenta.
 
 ## Traduções da documentação
 
-[PT-BR](/i18n/documentation/pt_br.md)
+[EN](./README.md)
+[PT-BR](/docs/pt_br.md)
