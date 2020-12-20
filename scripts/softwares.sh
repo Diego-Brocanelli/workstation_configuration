@@ -6,31 +6,38 @@ title_echo "INSTALLING SOFTWARE"
 
 if [ ${packages[curl]} = true ]
 then
-    line_echo "Curl"
+    install_echo "Curl"
     sudo apt install curl -y 1> /dev/null 2> /dev/stdout
+    success_install_echo "Curl"
 fi
 
 if [ ${packages[vim]} = true ]
 then
-    line_echo "Vim"
+    install_echo "Vim"
     sudo apt install vim -y 1> /dev/null 2> /dev/stdout
+    success_install_echo "Vim"
 fi
 
 if [ ${packages[git]} = true ]
 then
-    line_echo "Git"
+    install_echo "Git"
     sudo apt install git -y 1> /dev/null 2> /dev/stdout
+    success_install_echo "Git"
 
-    line_echo "Configuration to vim editor on Git"
+    install_echo "Configuration to vim editor on Git"
     git config --global core.editor vim
+    success_install_echo "Finalized definition of vim as default editor in Git"
 fi
 
 if [ ${packages[synapse]} = true ]
 then
-    line_echo "Synapse"
+    install_echo "Synapse"
+
     sudo add-apt-repository ppa:synapse-core/ppa -y 1> /dev/null 2> /dev/stdout
     sudo apt update -y 1> /dev/null 2> /dev/stdout 
     sudo apt install synapse -y 1> /dev/null 2> /dev/stdout
+
+    install_echo "success_install_echo"
 fi
 
 if [ ${packages[aws-cli]} = true ]
