@@ -29,7 +29,7 @@ do
 done
 
 # at least 1 item to be installed must be included in the list for the process sequence.
-if [ $i = 0 ]
+if [ $total_items_to_be_installed = 0 ]
 then 
     echo ""
     danger_echo "No software selected! Please configure in the setp.sh file"
