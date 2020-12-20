@@ -35,9 +35,9 @@ packages[postgresql]=false
 #
 packages[node]=false
 packages[go]=false 
-packages[php5.6-fpm]=true
+packages[php5.6-fpm]=false
 packages[php7.2-fpm]=false
-packages[php7.3-fpm]=true
+packages[php7.3-fpm]=false
 packages[php7.4-fpm]=true
 packages[php8.0-fpm]=true
 packages[composer]=true
@@ -61,7 +61,7 @@ packages[remmina]=false
 packages[insomnia]=true
 packages[htop]=true
 packages[telegram-desktop]=false
-packages[gitkraken]=true
+packages[gitkraken]=false
 
 #
 # Configure Dracula theme to SO
