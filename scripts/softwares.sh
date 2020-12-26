@@ -57,6 +57,17 @@ then
     success_install_echo "Finished installation: Docker"
 fi
 
+if [ ${packages[docker]} = true ]
+then
+    install_echo "Starting installation: Docker Compose"
+
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose 1> /dev/null 2> /dev/stdout
+    sudo chmod +x /usr/local/bin/docker-compose 1> /dev/null 2> /dev/stdout
+    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose 1> /dev/null 2> /dev/stdout
+
+    success_install_echo "Finished installation: Docker Compose"
+fi
+
 if [ ${packages[zsh]} = true ]
 then
     process_install_echo "zsh" "Zsh"
