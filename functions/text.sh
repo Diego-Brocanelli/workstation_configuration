@@ -50,3 +50,16 @@ function process_install_echo() {
         error_install_echo "Error in installation: $2"
     fi
 }
+
+function header_project_echo()
+{
+    header_echo "############################################################################"
+    header_echo "###                                                                        #"
+    header_echo "### Welcome to                                                             #"
+    header_echo "### Configuration assistant                                                #"
+    header_echo "###                                                                        #"
+    header_echo "### Project: https://github.com/Diego-Brocanelli/workstation_configuration #"
+    header_echo "### Author: Diego Brocanelli                                               #"
+    header_echo "###                                                                        #"
+    header_echo "############################################################################"
+}
