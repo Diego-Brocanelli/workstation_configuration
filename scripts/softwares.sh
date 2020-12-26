@@ -57,4 +57,19 @@ then
     success_install_echo "Finished installation: Docker"
 fi
 
+if [ ${packages[zsh]} = true ]
+then
+    process_install_echo "zsh" "Zsh"
+fi
+
+if [ ${packages[set-default-zsh]} = true ]
+then
+    sudo usermod -s /usr/bin/zsh $(whoami)
+fi
+
+if [ ${packages[oh-my-zsh]} = true ]
+then
+    sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 1> /dev/null 2> /dev/stdout
+fi
+
 echo ""
