@@ -19,7 +19,6 @@ packages[aws-cli]=false
 packages[docker]=false
 packages[zsh]=true
 packages[set-default-zsh]=true
-packages[oh-my-zsh]=true
 
 #
 # Servers

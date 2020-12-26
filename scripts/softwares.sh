@@ -67,9 +67,4 @@ then
     sudo usermod -s /usr/bin/zsh $(whoami) 1> /dev/null 2> /dev/stdout
 fi
 
-if [ ${packages[oh-my-zsh]} = true ]
-then
-    sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" 1> /dev/null 2> /dev/stdout
-fi
-
 echo ""
