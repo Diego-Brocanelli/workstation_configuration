@@ -1,12 +1,14 @@
 #!/bin/bash 
 
-# Responsible for loading the file containing the information of what will be installed.
-source setup.sh
-
 source scripts/log.sh
-
 source functions/text.sh
 source functions/packages.sh
+source functions/files.sh
+
+# Responsible for checking if the configuration file exists.
+setup_exists
+
+source setup.sh
 
 date_start=$(date +'%Y-%m-%d %T')
 
