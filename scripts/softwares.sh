@@ -46,13 +46,19 @@ if [ ${packages[docker]} = true ]
 then
     install_echo "Starting installation: Docker"
 
-    sudo apt update 1> /dev/null 2> /dev/stdout
-    sudo apt install apt-transport-https ca-certificates curl software-properties-common 1> /dev/null 2> /dev/stdout
+    sudo sudo apt-get install \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        gnupg-agent \
+        software-properties-common 1> /dev/null 2> /dev/stdout
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 1> /dev/null 2> /dev/stdout
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" 1> /dev/null 2> /dev/stdout
-    sudo apt update 1> /dev/null 2> /dev/stdout
-    sudo apt install docker-ce 1> /dev/null 2> /dev/stdout
-    sudo systemctl status docker 1> /dev/null 2> /dev/stdout
+    sudo add-apt-repository \
+        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+        $(lsb_release -cs) \
+        stable"
+    sudo apt update -y 1> /dev/null 2> /dev/stdout
+    sudo apt install docker-ce docker-ce-cli containerd.io -y 1> /dev/null 2> /dev/stdout
 
     success_install_echo "Finished installation: Docker"
 fi
