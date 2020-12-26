@@ -1,14 +1,7 @@
 #!/bin/bash 
 
-header_echo "############################################################################"
-header_echo "###                                                                        #"
-header_echo "### Welcome to                                                             #"
-header_echo "### Configuration assistant                                                #"
-header_echo "###                                                                        #"
-header_echo "### Project: https://github.com/Diego-Brocanelli/workstation_configuration #"
-header_echo "### Author: Diego Brocanelli                                               #"
-header_echo "###                                                                        #"
-header_echo "############################################################################"
+header_project_echo
+
 echo ""
 danger_echo "***********************ALERT******************************"
 danger_echo "THIS SCRIPT WILL UPDATE THE APT PACKAGES ON YOUR COMPUTER!"
