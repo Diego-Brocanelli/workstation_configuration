@@ -64,7 +64,7 @@ fi
 
 if [ ${packages[set-default-zsh]} = true ]
 then
-    sudo usermod -s /usr/bin/zsh $(whoami)
+    sudo usermod -s /usr/bin/zsh $(whoami) 1> /dev/null 2> /dev/stdout
 fi
 
 if [ ${packages[oh-my-zsh]} = true ]
