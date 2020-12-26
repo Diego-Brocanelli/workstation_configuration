@@ -40,7 +40,7 @@ packages[go]=false
 packages[php5.6-fpm]=false
 packages[php7.2-fpm]=false
 packages[php7.3-fpm]=false
-packages[php7.4-fpm]=true
+packages[php7.4-fpm]=false
 packages[php8.0-fpm]=true
 packages[composer]=true
 packages[sass]=false 
@@ -50,8 +50,8 @@ packages[rust]=false
 #
 # Tools
 #
-packages[mysql-workbench]=true
-packages[dbeaver]=false
+packages[mysql-workbench]=false
+packages[dbeaver]=true
 packages[skype]=false
 packages[slack]=false
 packages[code]=true
