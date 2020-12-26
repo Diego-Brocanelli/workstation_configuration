@@ -26,20 +26,20 @@ do
         if [ -n "$installed" ]
         then
 
-            echo -e "\u2705 $package"
+            echo -e " \u2705 $package"
 
             register_log "    $package ....INSTALLED"
 
         elif which $package > /dev/null ;
         then
 
-            echo -e "\u2705 $package"
+            echo -e " \u2705 $package"
 
             register_log "    $package .... INSTALLED"
 
         else
 
-            echo -e "\u274C $package" 
+            echo -e " \u274C $package" 
 
             register_log "    $package .... NOT INSTALLED"
         fi
@@ -48,7 +48,7 @@ done
 
 if [ $config_so_dracula_theme = true ]
 then
-    echo -e "\u2705 Dracula theme"
+    echo -e " \u2705 Dracula theme"
 
     register_log "    Dracula theme .... CONFIGURED"
 fi
