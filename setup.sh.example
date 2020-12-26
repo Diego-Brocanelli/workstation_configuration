@@ -16,7 +16,8 @@ packages[set-vim-git]=true
 packages[git]=true
 packages[synapse]=true
 packages[aws-cli]=false
-packages[docker]=false
+packages[docker]=true
+packages[docker-compose]=true
 packages[zsh]=true
 packages[set-default-zsh]=true
 
