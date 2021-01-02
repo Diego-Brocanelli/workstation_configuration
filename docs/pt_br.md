@@ -4,11 +4,11 @@ Script shell para automatizar instalações e configurações estação de traba
 
 ## Compatibilidade
 
-Os testes foram realizados no Linux Mint 19.2 e 20.0 e Ubuntu 19.10 e 20.04
+Os testes foram realizados no Linux Mint 19.2 e 20.0 e Ubuntu 19.10 e 20.04.
 
 ## Configurações
 
-Você pode editar o arquivo `setup.sh` informando o que deseja instalar.
+Você deve copiar o arquivo `setup.sh.example` renomear para `setup.sh.` e editar o arquivo informando o que deseja instalar ou não.
 
 Para fazer isso, basta abrir o arquivo e informar com `true` ou `false` o que você deseja instalar.
 

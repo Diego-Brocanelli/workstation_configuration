@@ -4,11 +4,11 @@ Shell script to automate desktop installations and configurations for a web deve
 
 ## Compatibility
 
-Tests were performed on Linux Mint 19.2 and Ubuntu 19.10
+Tests were performed on Linux Mint 19.2, 19.20, Ubuntu 19.10 and 20.04.
 
 ## Setup
 
-You can edit the `setup.sh` file stating what you want to be installed or not.
+You must copy the file `setup.sh.example`, rename it to` setup.sh.` and edit the file informing what you want to install or not.
 
 To do this simply open the file and inform with `true` or `false` what you want to install.
 
@@ -42,6 +42,8 @@ Path: /log/installation_log.txt
 | Resource | Name |
 |---   |---|
 | Softwares | Build Essential |
+| Softwares | Docker |
+| Softwares | Docker-compose |
 | Softwares | Git |
 | Softwares | Vim |
 
